@@ -14,17 +14,23 @@ public class MainWindowViewModel : BindableBase
     public MainWindowViewModel()
     {
         var glossaries = LoadGlossaries();
-        AvailableGlossaries = new ObservableCollection<SelectableGlossary>(
-            glossaries.Select(g => new SelectableGlossary(g)));
+        AvailableGlossaries = new ObservableCollection<Glossary>(glossaries);
 
-        foreach (var glossary in AvailableGlossaries)
-            glossary.PropertyChanged += OnGlossarySelectionChanged;
-
-        StartCommand = new DelegateCommand(StartQuiz, CanStartQuiz);
+        StartCommand = new DelegateCommand(StartQuiz, CanStartQuiz)
+            .ObservesProperty(() => SelectedGlossary);
         SubmitCommand = new DelegateCommand(Submit, CanSubmit)
             .ObservesProperty(() => UserInput);
         RestartCommand = new DelegateCommand(Restart);
         SelectGlossaryCommand = new DelegateCommand(SelectGlossary);
+    }
+
+    public ObservableCollection<Glossary> AvailableGlossaries { get; }
+
+    private Glossary? _selectedGlossary;
+    public Glossary? SelectedGlossary
+    {
+        get => _selectedGlossary;
+        set => SetProperty(ref _selectedGlossary, value);
     }
 
     private void OnGlossarySelectionChanged(object? sender, PropertyChangedEventArgs e)
@@ -33,7 +39,6 @@ public class MainWindowViewModel : BindableBase
             StartCommand.RaiseCanExecuteChanged();
     }
 
-    public ObservableCollection<SelectableGlossary> AvailableGlossaries { get; }
 
     private bool _isQuizStarted;
     public bool IsQuizStarted
@@ -47,9 +52,10 @@ public class MainWindowViewModel : BindableBase
 
     private void StartQuiz()
     {
-        _items = AvailableGlossaries
-            .Where(g => g.IsSelected)
-            .SelectMany(g => g.Glossary.Items)
+        if (SelectedGlossary == null)
+            return;
+
+        _items = SelectedGlossary.Items
             .OrderBy(_ => Guid.NewGuid())
             .ToList();
 
@@ -61,7 +67,9 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
-    private bool CanStartQuiz() => AvailableGlossaries.Any(g => g.IsSelected);
+    private bool CanStartQuiz()
+        => SelectedGlossary != null;
+
 
     public event Action? NewWordLoaded;
 
@@ -131,7 +139,7 @@ public class MainWindowViewModel : BindableBase
         if (isCorrect)
         {
             _correctAnswers++;
-            FeedbackText = "Correct!";
+            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
             FeedbackColor = Brushes.Green;
         }
         else
@@ -165,13 +173,13 @@ public class MainWindowViewModel : BindableBase
     private void Finish()
     {
         IsFinished = true;
-        FeedbackText = "";
-        FeedbackColor = Brushes.Black;
         ScoreText = $"Score: {_correctAnswers} / {_items.Count}";
     }
 
     private void Restart()
     {
+        FeedbackText = "";
+        FeedbackColor = Brushes.Black;
         _currentIndex = 0;
         _correctAnswers = 0;
         IsFinished = false;
@@ -182,9 +190,12 @@ public class MainWindowViewModel : BindableBase
 
     private void SelectGlossary()
     {
-        // Reset quiz state
+        FeedbackText = "";
+        FeedbackColor = Brushes.Black;
         IsFinished = false;
         IsQuizStarted = false;
+
+        SelectedGlossary = null;
 
         FeedbackText = string.Empty;
         FeedbackColor = Brushes.Black;
@@ -195,12 +206,6 @@ public class MainWindowViewModel : BindableBase
         _items = null!;
         _currentIndex = 0;
         _correctAnswers = 0;
-
-        // Optional: unselect all glossaries
-        foreach (var glossary in AvailableGlossaries)
-            glossary.IsSelected = false;
-
-        StartCommand.RaiseCanExecuteChanged();
     }
 
     private static List<Glossary> LoadGlossaries()
@@ -208,27 +213,13 @@ public class MainWindowViewModel : BindableBase
     {
         new Glossary
         {
-            Name = "People & Jobs",
+            Name = "Section 2, Unit 3 - Describe your Family",
             Items =
             {
                 new() { Word = "Office worker", ValidTranslations = { "kaishain", "かいしゃいん", "会社員" } },
                 new() { Word = "Nurse", ValidTranslations = { "kangoshi", "かんごし", "看護師" } },
-            }
-        },
-        new Glossary
-        {
-            Name = "Family",
-            Items =
-            {
                 new() { Word = "Husband", ValidTranslations = { "otto", "おっと", "夫" } },
                 new() { Word = "Wife", ValidTranslations = { "tsuma", "つま", "妻" } },
-            }
-        },
-        new Glossary
-        {
-            Name = "Adjectives",
-            Items =
-            {
                 new() { Word = "Smart", ValidTranslations = { "atamagaii", "あたまがいい", "頭がいい" } },
                 new() { Word = "Famous", ValidTranslations = { "yuumei", "ゆうめい", "有名" } },
                 new() { Word = "Fashionable",  ValidTranslations = new() { "oshare", "おしゃれ" } },

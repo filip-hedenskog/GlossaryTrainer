@@ -14,27 +14,22 @@
         </Grid.RowDefinitions>
 
         <StackPanel Visibility="{Binding IsQuizStarted, Converter={StaticResource InverseBoolToVis}}">
-            <TextBlock Text="Select glossary lists"
+            <TextBlock Text="Select glossary"
                FontSize="22"
                FontWeight="Bold"
                Margin="0,0,0,10"/>
 
-            <ItemsControl ItemsSource="{Binding AvailableGlossaries}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding Name}"
-                          IsChecked="{Binding IsSelected}"
-                          FontSize="16"
-                          Margin="0,5"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <ComboBox ItemsSource="{Binding AvailableGlossaries}"
+              SelectedItem="{Binding SelectedGlossary}"
+              DisplayMemberPath="Name"
+              Height="35"
+              FontSize="16"
+              Margin="0,0,0,15"/>
 
             <Button Content="Start"
-            IsDefault="True"
+                    IsDefault="True"
             Command="{Binding StartCommand}"
-            Height="35"
-            Margin="0,15,0,0"/>
+            Height="35"/>
         </StackPanel>
 
         <!-- Quiz -->
@@ -50,9 +45,23 @@
             <TextBox
                 x:Name="UserInputTextBox"
                 Text="{Binding UserInput, UpdateSourceTrigger=PropertyChanged}"
-                Height="40"
-                FontSize="20"
-                Margin="0,0,0,10"/>
+                Height="42"
+                FontSize="30"
+                FontFamily="Yu Gothic UI"
+                FontWeight="Bold"
+                Margin="0,0,0,10"
+                VerticalContentAlignment="Center">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="IsEnabled" Value="True"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsFinished}" Value="True">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
 
             <Button
                 Content="Submit"
@@ -61,11 +70,12 @@
                 Height="30"/>
 
             <TextBlock Text="{Binding FeedbackText}"
-                Foreground="{Binding FeedbackColor}"
-                FontWeight="Bold"
-                FontSize="24"
-                HorizontalAlignment="Left"
-                Margin="0,5,0,10"/>
+           Foreground="{Binding FeedbackColor}"
+           FontFamily="Yu Gothic UI"
+           FontWeight="Bold"
+           FontSize="30"
+           HorizontalAlignment="Left"
+           Margin="0,5,0,10"/>
         </StackPanel>
 
         <!-- Result -->
