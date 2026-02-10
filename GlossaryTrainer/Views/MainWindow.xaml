@@ -13,9 +13,32 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Visibility="{Binding IsQuizStarted, Converter={StaticResource InverseBoolToVis}}">
+            <TextBlock Text="Select glossary lists"
+               FontSize="22"
+               FontWeight="Bold"
+               Margin="0,0,0,10"/>
+
+            <ItemsControl ItemsSource="{Binding AvailableGlossaries}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Name}"
+                          IsChecked="{Binding IsSelected}"
+                          FontSize="16"
+                          Margin="0,5"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <Button Content="Start"
+            IsDefault="True"
+            Command="{Binding StartCommand}"
+            Height="35"
+            Margin="0,15,0,0"/>
+        </StackPanel>
+
         <!-- Quiz -->
-        <StackPanel Orientation="Vertical"
-            Visibility="{Binding IsFinished, Converter={StaticResource InverseBoolToVis}}">
+        <StackPanel Orientation="Vertical" Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
 
             <TextBlock
                 Text="{Binding CurrentWord}"
@@ -46,25 +69,29 @@
         </StackPanel>
 
         <!-- Result -->
-        <StackPanel
-            Grid.Row="1"
+        <StackPanel Grid.Row="1"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Visibility="{Binding IsFinished, Converter={StaticResource BooleanToVisibilityConverter}}"
-            Orientation="Vertical">
+            Visibility="{Binding IsFinished, Converter={StaticResource BooleanToVisibilityConverter}}">
 
-            <TextBlock
-                Text="{Binding ScoreText}"
-                FontSize="22"
-                FontWeight="Bold"
-                Margin="0,0,0,20"/>
+            <TextBlock Text="{Binding ScoreText}"
+               FontSize="22"
+               FontWeight="Bold"
+               Margin="0,0,0,20"
+               HorizontalAlignment="Center"/>
 
-            <Button
-                Content="Restart"
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Restart"
                 Command="{Binding RestartCommand}"
-                Width="100"
+                Width="120"
                 Height="30"
-                IsDefault="True"/>
+                Margin="0,0,10,0"/>
+
+                <Button Content="Select glossary"
+                Command="{Binding SelectGlossaryCommand}"
+                Width="140"
+                Height="30"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

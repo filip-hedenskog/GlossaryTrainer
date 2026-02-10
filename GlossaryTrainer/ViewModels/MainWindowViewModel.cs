@@ -1,27 +1,67 @@
 ﻿using GlossaryTrainer.Models;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Media;
 
 namespace GlossaryTrainer.ViewModels;
 
 public class MainWindowViewModel : BindableBase
 {
-    private readonly List<GlossaryItem> _items;
+    private List<GlossaryItem> _items;
     private int _currentIndex;
     private int _correctAnswers;
 
     public MainWindowViewModel()
     {
-        _items = LoadGlossary()
-            .OrderBy(_ => Guid.NewGuid()) // random order
-            .ToList();
+        var glossaries = LoadGlossaries();
+        AvailableGlossaries = new ObservableCollection<SelectableGlossary>(
+            glossaries.Select(g => new SelectableGlossary(g)));
 
+        foreach (var glossary in AvailableGlossaries)
+            glossary.PropertyChanged += OnGlossarySelectionChanged;
+
+        StartCommand = new DelegateCommand(StartQuiz, CanStartQuiz);
         SubmitCommand = new DelegateCommand(Submit, CanSubmit)
             .ObservesProperty(() => UserInput);
-
         RestartCommand = new DelegateCommand(Restart);
+        SelectGlossaryCommand = new DelegateCommand(SelectGlossary);
+    }
+
+    private void OnGlossarySelectionChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(SelectableGlossary.IsSelected))
+            StartCommand.RaiseCanExecuteChanged();
+    }
+
+    public ObservableCollection<SelectableGlossary> AvailableGlossaries { get; }
+
+    private bool _isQuizStarted;
+    public bool IsQuizStarted
+    {
+        get => _isQuizStarted;
+        set => SetProperty(ref _isQuizStarted, value);
+    }
+
+    public DelegateCommand StartCommand { get; }
+    public DelegateCommand SelectGlossaryCommand { get; }
+
+    private void StartQuiz()
+    {
+        _items = AvailableGlossaries
+            .Where(g => g.IsSelected)
+            .SelectMany(g => g.Glossary.Items)
+            .OrderBy(_ => Guid.NewGuid())
+            .ToList();
+
+        _currentIndex = 0;
+        _correctAnswers = 0;
+        IsFinished = false;
+        IsQuizStarted = true;
 
         LoadCurrent();
     }
+
+    private bool CanStartQuiz() => AvailableGlossaries.Any(g => g.IsSelected);
 
     public event Action? NewWordLoaded;
 
@@ -139,6 +179,62 @@ public class MainWindowViewModel : BindableBase
         _items.Sort((_, _) => Guid.NewGuid().CompareTo(Guid.NewGuid()));
         LoadCurrent();
     }
+
+    private void SelectGlossary()
+    {
+        // Reset quiz state
+        IsFinished = false;
+        IsQuizStarted = false;
+
+        FeedbackText = string.Empty;
+        FeedbackColor = Brushes.Black;
+        CurrentWord = string.Empty;
+        UserInput = string.Empty;
+        ScoreText = string.Empty;
+
+        _items = null!;
+        _currentIndex = 0;
+        _correctAnswers = 0;
+
+        // Optional: unselect all glossaries
+        foreach (var glossary in AvailableGlossaries)
+            glossary.IsSelected = false;
+
+        StartCommand.RaiseCanExecuteChanged();
+    }
+
+    private static List<Glossary> LoadGlossaries()
+    => new()
+    {
+        new Glossary
+        {
+            Name = "People & Jobs",
+            Items =
+            {
+                new() { Word = "Office worker", ValidTranslations = { "kaishain", "かいしゃいん", "会社員" } },
+                new() { Word = "Nurse", ValidTranslations = { "kangoshi", "かんごし", "看護師" } },
+            }
+        },
+        new Glossary
+        {
+            Name = "Family",
+            Items =
+            {
+                new() { Word = "Husband", ValidTranslations = { "otto", "おっと", "夫" } },
+                new() { Word = "Wife", ValidTranslations = { "tsuma", "つま", "妻" } },
+            }
+        },
+        new Glossary
+        {
+            Name = "Adjectives",
+            Items =
+            {
+                new() { Word = "Smart", ValidTranslations = { "atamagaii", "あたまがいい", "頭がいい" } },
+                new() { Word = "Famous", ValidTranslations = { "yuumei", "ゆうめい", "有名" } },
+                new() { Word = "Fashionable",  ValidTranslations = new() { "oshare", "おしゃれ" } },
+            }
+        }
+    };
 
     private static List<GlossaryItem> LoadGlossary()
         => new()
