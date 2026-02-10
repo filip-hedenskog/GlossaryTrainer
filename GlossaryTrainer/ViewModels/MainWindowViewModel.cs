@@ -226,16 +226,4 @@ public class MainWindowViewModel : BindableBase
             }
         }
     };
-
-    private static List<GlossaryItem> LoadGlossary()
-        => new()
-        {
-        new() { Word = "Office worker", ValidTranslations = new() { "kaishain", "かいしゃいん", "会社員" } },
-        new() { Word = "Husband",      ValidTranslations = new() { "otto", "おっと", "夫" } },
-        new() { Word = "Wife",         ValidTranslations = new() { "tsuma", "つま", "妻" } },
-        new() { Word = "Smart",        ValidTranslations = new() { "atamagaii", "あたまがいい", "頭がいい" } },
-        new() { Word = "Famous",       ValidTranslations = new() { "yuumei", "ゆうめい", "有名" } },
-        new() { Word = "Nurse",        ValidTranslations = new() { "kangoshi", "かんごし", "看護師" } },
-        new() { Word = "Fashionable",  ValidTranslations = new() { "oshare", "おしゃれ" } },
-        };
 }
