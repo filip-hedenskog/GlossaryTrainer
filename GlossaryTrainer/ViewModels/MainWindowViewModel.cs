@@ -216,13 +216,16 @@ public class MainWindowViewModel : BindableBase
             Name = "Section 2, Unit 3 - Describe your Family",
             Items =
             {
-                new() { Word = "Office worker", ValidTranslations = { "kaishain", "かいしゃいん", "会社員" } },
-                new() { Word = "Nurse", ValidTranslations = { "kangoshi", "かんごし", "看護師" } },
-                new() { Word = "Husband", ValidTranslations = { "otto", "おっと", "夫" } },
-                new() { Word = "Wife", ValidTranslations = { "tsuma", "つま", "妻" } },
-                new() { Word = "Smart", ValidTranslations = { "atamagaii", "あたまがいい", "頭がいい" } },
-                new() { Word = "Famous", ValidTranslations = { "yuumei", "ゆうめい", "有名" } },
-                new() { Word = "Fashionable",  ValidTranslations = new() { "oshare", "おしゃれ" } },
+                new("Office worker", [ "kaishain", "かいしゃいん", "会社員" ]),
+                new("Nurse", [ "kangoshi", "かんごし", "看護師" ]),
+                new("Husband", [ "otto", "おっと", "夫" ]),
+                new("Wife", [ "tsuma", "つま", "妻" ]),
+                new("Smart", [ "atamagaii", "あたまがいい", "頭がいい" ]),
+                new("Famous", [ "yuumei", "ゆうめい", "有名" ]),
+                new("Fashionable", [ "oshare", "おしゃれ" ]),
+                new("Noisy", [ "urusai", "うるさい" ]),
+                new("Quiet", [ "shizuka", "しずか", "静か" ]),
+                new("Cheerful", [ "akarui", "あかるい", "明るい" ]),
             }
         }
     };
