@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
         Title="Glossary Trainer"
-        Width="600"
-        Height="500"
+        Width="1200"
+        Height="700"
+        WindowStartupLocation="CenterScreen"
         prism:ViewModelLocator.AutoWireViewModel="True">
 
     <Grid Margin="20">
@@ -29,6 +30,10 @@
             <Button Content="Start"
                     IsDefault="True"
             Command="{Binding StartCommand}"
+            Height="35"/>
+            <Button Content="Load"
+                    IsDefault="True"
+            Command="{Binding LoadCommand}"
             Height="35"/>
         </StackPanel>
 
@@ -91,6 +96,18 @@
                HorizontalAlignment="Center"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Save failed"
+                Command="{Binding SaveCommand}"
+                Width="120"
+                Height="30"
+                Margin="0,0,10,0"/>
+                
+                <Button Content="Run failed"
+                Command="{Binding RunFailedCommand}"
+                Width="120"
+                Height="30"
+                Margin="0,0,10,0"/>
+                
                 <Button Content="Restart"
                 Command="{Binding RestartCommand}"
                 Width="120"
