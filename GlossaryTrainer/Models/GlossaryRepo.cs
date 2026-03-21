@@ -19,6 +19,7 @@ internal static class GlossaryRepo
             new("vase", ["かびん", "花瓶"]),
             new("dining room / dining", ["ダイニング"]),
             new("handmade", ["てづくり", "手作り"]),
+            new("wall", ["かべ", "壁"]),
             ]),
 
         new("Archive",[

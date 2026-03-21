@@ -35,12 +35,15 @@
 
             <Button Content="Start"
                     IsDefault="True"
-            Command="{Binding StartCommand}"
-            Height="35"/>
+                    Height="35"
+                    FontSize="16"
+                    Command="{Binding StartCommand}" 
+                    Margin="5"/>
             <Button Content="Load"
-                    IsDefault="True"
-            Command="{Binding LoadCommand}"
-            Height="35"/>
+                    Height="35"
+                    FontSize="16"
+                    Command="{Binding LoadCommand}"
+                    Margin="5"/>
         </StackPanel>
 
         <!-- Quiz -->
