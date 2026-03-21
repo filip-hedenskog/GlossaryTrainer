@@ -6,7 +6,22 @@ internal static class GlossaryRepo
     =>
     [
         new("Section 3, unit 28 - Describe health issues",[
-            new("to put in / to insert / to add", ["いれます", "入れます"], Tooltip.Iremasu),
+            new("to put in / to insert / to add (object / reservation)", ["いれます", "入れます"], Tooltip.Iremasu),
+            new("What’s wrong? / What happened?", ["どうしましたか"], Tooltip.Doushimashitaka),
+            new("It hurts / painful", ["いたい", "痛い"], Tooltip.Itai),
+            new("head", ["あたま", "頭"], Tooltip.Atama),
+            new("neck", ["くび", "首"], Tooltip.Kubi),
+            new("electricity / electric / light", ["でんき", "電気"], Tooltip.Denki),
+            new("social media", ["えすえぬえす", "SNS"], Tooltip.SNS),
+            new("almost / mostly / nearly all", ["ほとんど"], Tooltip.Hotondo),
+            new("arm", ["うで", "腕"], Tooltip.Ude),
+            new("to fall / to tumble", ["ころびます", "転びます"], Tooltip.Korobimasu),
+            new("to hit / to strike / to bump / to get hit", ["うちます", "打ちます"], Tooltip.Uchimasu),
+            new("wound / cut / injury", ["きず", "傷"], Tooltip.Kizu),
+            new("pharmacy / drugstore", ["やっきょく", "薬局"], Tooltip.Yakkyoku),
+            new("for a while / for some time", ["しばらく"], Tooltip.Shibaraku),
+            new("to get better / to recover / to be fixed", ["なおります", "治ります"], Tooltip.Naorimasu),
+            new("to paint / to apply / to spread", ["ぬります", "塗ります"], Tooltip.Nurimasu),
         ]),
 
         new("Section 3, unit 27 - Use past tense adjectives",[

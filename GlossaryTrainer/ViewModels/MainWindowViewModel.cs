@@ -37,6 +37,8 @@ public class MainWindowViewModel : BindableBase
         PassShortcutCommand = new DelegateCommand(OnPassShortcut);
         FailShortcutCommand = new DelegateCommand(OnFailShortcut);
         RevealShortcutCommand = new DelegateCommand(OnRevealShortcut);
+        ToggleTooltipCommand = new DelegateCommand(OnToggleTooltip);
+        CloseTooltipCommand = new DelegateCommand(() => ShowTooltip = false);
     }
 
     public bool CanRunPassOrFailedCommand { get; set; }
@@ -67,6 +69,14 @@ public class MainWindowViewModel : BindableBase
         FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
         FeedbackColor = Brushes.DodgerBlue;
         PlayRevealSound();
+    }
+
+    private void OnToggleTooltip()
+    {
+        if (FeedbackText == "" || CurrentTooltip == "")
+            return;
+
+        ShowTooltip = !ShowTooltip;
     }
 
     public ObservableCollection<Glossary> AvailableGlossaries { get; }
@@ -100,7 +110,8 @@ public class MainWindowViewModel : BindableBase
     public DelegateCommand PassShortcutCommand { get; }
     public DelegateCommand FailShortcutCommand { get; }
     public DelegateCommand RevealShortcutCommand { get; }
-
+    public DelegateCommand ToggleTooltipCommand { get; }
+    public DelegateCommand CloseTooltipCommand { get; }
     private void StartQuiz()
     {
         if (SelectedGlossary == null)
@@ -134,12 +145,20 @@ public class MainWindowViewModel : BindableBase
         set => SetProperty(ref _feedbackText, value);
     }
 
-    private string _currentTooltip;
+    private string _currentTooltip = "";
     public string CurrentTooltip
     {
         get => _currentTooltip;
         set => SetProperty(ref _currentTooltip, value);
     }
+
+    private bool _showTooltip;
+    public bool ShowTooltip
+    {
+        get => _showTooltip;
+        set => SetProperty(ref _showTooltip, value);
+    }
+
 
     private Brush _feedbackColor;
     public Brush FeedbackColor
@@ -221,6 +240,7 @@ public class MainWindowViewModel : BindableBase
     private void LoadCurrent()
     {
         CanRunPassOrFailedCommand = true;
+        ShowTooltip = false;
         UserInput = string.Empty;
 
         if (_currentIndex >= _items.Count)
