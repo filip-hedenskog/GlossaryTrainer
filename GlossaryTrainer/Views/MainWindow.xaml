@@ -82,8 +82,9 @@
             <Button
                 Content="Submit"
                 IsDefault="True"
-                Command="{Binding SubmitCommand}"
-                Height="30"/>
+                Height="35"
+                FontSize="16"
+                Command="{Binding SubmitCommand}"/>
 
             <TextBlock Text="{Binding FeedbackText}"
            Foreground="{Binding FeedbackColor}"

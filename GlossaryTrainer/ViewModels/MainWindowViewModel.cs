@@ -65,7 +65,7 @@ public class MainWindowViewModel : BindableBase
 
         var current = _items[_currentIndex];
         FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
-        FeedbackColor = Brushes.Blue;
+        FeedbackColor = Brushes.DodgerBlue;
         PlayRevealSound();
     }
 
@@ -191,7 +191,7 @@ public class MainWindowViewModel : BindableBase
         {
             _correctAnswers++;
             FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
-            FeedbackColor = Brushes.Green;
+            FeedbackColor = Brushes.SeaGreen;
             PlayCorrectSound();
         }
         else
