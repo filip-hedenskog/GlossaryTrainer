@@ -6,6 +6,10 @@ internal static class GlossaryRepo
     =>
     [
         new("Section 3, unit 28 - Describe health issues",[
+
+            ]),
+
+        new("Section 3, unit 28 - Describe health issues",[
             new("to put in / to insert / to add (object / reservation)", ["いれます", "入れます"], Tooltip.Iremasu),
             new("What’s wrong? / What happened?", ["どうしましたか"], Tooltip.Doushimashitaka),
             new("It hurts / painful", ["いたい", "痛い"], Tooltip.Itai),
