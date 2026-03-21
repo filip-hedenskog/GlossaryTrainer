@@ -134,6 +134,13 @@ public class MainWindowViewModel : BindableBase
         set => SetProperty(ref _feedbackText, value);
     }
 
+    private string _currentTooltip;
+    public string CurrentTooltip
+    {
+        get => _currentTooltip;
+        set => SetProperty(ref _currentTooltip, value);
+    }
+
     private Brush _feedbackColor;
     public Brush FeedbackColor
     {
@@ -192,6 +199,7 @@ public class MainWindowViewModel : BindableBase
             _correctAnswers++;
             FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
             FeedbackColor = Brushes.SeaGreen;
+            CurrentTooltip = current.Tooltip;
             PlayCorrectSound();
         }
         else
@@ -199,6 +207,7 @@ public class MainWindowViewModel : BindableBase
             FeedbackText = $"Wrong! Correct answer:{Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
             FeedbackColor = Brushes.Red;
             FailedItems.Add(current);
+            CurrentTooltip = current.Tooltip;
             PlayFailedSound();
         }
 

@@ -6,7 +6,8 @@
         Width="1200"
         Height="700"
         WindowStartupLocation="CenterScreen"
-        prism:ViewModelLocator.AutoWireViewModel="True">
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        x:Name="MainWindowRoot">
 
     <Window.InputBindings>
         <KeyBinding Key="F1" Command="{Binding PassShortcutCommand}" />
@@ -87,12 +88,23 @@
                 Command="{Binding SubmitCommand}"/>
 
             <TextBlock Text="{Binding FeedbackText}"
-           Foreground="{Binding FeedbackColor}"
-           FontFamily="Yu Gothic UI"
-           FontWeight="Bold"
-           FontSize="30"
-           HorizontalAlignment="Left"
-           Margin="0,5,0,10"/>
+                       Foreground="{Binding FeedbackColor}"
+                       FontFamily="Yu Gothic UI"
+                       FontWeight="Bold"
+                       FontSize="30"
+                       HorizontalAlignment="Left"
+                       Margin="0,5,0,10">
+            <TextBlock.ToolTip>
+                <ToolTip PlacementTarget="{Binding ElementName=MainWindowRoot}"
+                         MaxWidth="1000">
+                    <TextBlock Text="{Binding CurrentTooltip}"
+                               FontSize="30"
+                               TextWrapping="Wrap"/>
+
+                </ToolTip>
+            </TextBlock.ToolTip>
+
+</TextBlock>
         </StackPanel>
 
         <!-- Result -->
@@ -113,13 +125,13 @@
                 Width="120"
                 Height="30"
                 Margin="0,0,10,0"/>
-                
+
                 <Button Content="Run failed"
                 Command="{Binding RunFailedCommand}"
                 Width="120"
                 Height="30"
                 Margin="0,0,10,0"/>
-                
+
                 <Button Content="Restart"
                 Command="{Binding RestartCommand}"
                 Width="120"

@@ -5,7 +5,11 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
-        new("Relevant",[
+        new("Section 3, unit 28 - Describe health issues",[
+            new("to put in / to insert / to add", ["いれます", "入れます"], Tooltip.Iremasu),
+        ]),
+
+        new("Section 3, unit 27 - Use past tense adjectives",[
             new("shelf", ["たな", "棚"]),
             new("husband", ["だんなさん", "旦那さん"]),
             new("wife", ["おくさん", "奥さん"]),
