@@ -19,7 +19,7 @@ public class MainWindowViewModel : BindableBase
 
     public MainWindowViewModel()
     {
-        var glossaries = LoadGlossaries();
+        var glossaries = GlossaryRepo.Load();
         AvailableGlossaries = new ObservableCollection<Glossary>(glossaries);
 
         StartCommand = new DelegateCommand(StartQuiz, CanStartQuiz)
@@ -33,6 +33,28 @@ public class MainWindowViewModel : BindableBase
         SaveCommand = new DelegateCommand(OnSave, CanRunFailed)
             .ObservesProperty(() => FailedItems);
         SelectGlossaryCommand = new DelegateCommand(SelectGlossary);
+
+        PassShortcutCommand = new DelegateCommand(OnPassShortcut);
+        FailShortcutCommand = new DelegateCommand(OnFailShortcut);
+    }
+
+    public bool CanRunPassOrFailedCommand { get; set; }
+    private void OnPassShortcut()
+    {
+        if (!CanRunPassOrFailedCommand)
+            return;
+
+        UserInput = _items[_currentIndex].ValidTranslations.First();
+        Submit();
+    }
+
+    private void OnFailShortcut()
+    {
+        if (!CanRunPassOrFailedCommand)
+            return;
+
+        UserInput = Guid.NewGuid().ToString();
+        Submit();
     }
 
     public ObservableCollection<Glossary> AvailableGlossaries { get; }
@@ -63,6 +85,8 @@ public class MainWindowViewModel : BindableBase
     public DelegateCommand SaveCommand { get; }
     public DelegateCommand RunFailedCommand { get; }
     public DelegateCommand SelectGlossaryCommand { get; }
+    public DelegateCommand PassShortcutCommand { get; }
+    public DelegateCommand FailShortcutCommand { get; }
 
     private void StartQuiz()
     {
@@ -174,6 +198,7 @@ public class MainWindowViewModel : BindableBase
 
     private void LoadCurrent()
     {
+        CanRunPassOrFailedCommand = true;
         UserInput = string.Empty;
 
         if (_currentIndex >= _items.Count)
@@ -189,6 +214,7 @@ public class MainWindowViewModel : BindableBase
 
     private void Finish()
     {
+        CanRunPassOrFailedCommand = false;
         PlayDoneSound();
         IsFinished = true;
         ScoreText = $"Score: {_correctAnswers} / {_items.Count}";
@@ -318,30 +344,4 @@ public class MainWindowViewModel : BindableBase
         player.Volume = 0.15;
         player.Play();
     }
-
-    private static List<Glossary> LoadGlossaries()
-    =>
-    [
-        new("Relevant",[
-            new("onion", ["たまねぎ", "玉ねぎ"]),
-            new("sugar", ["さとう", "砂糖"]),
-            new("potato", ["じゃがいも", "じゃがいも"]),
-            new("wheat flour / flour", ["こむぎこ", "小麦粉"]),
-
-            new("life / daily life", ["せいかつ", "生活"]),
-            new("traditional flooring", ["たたみ", "畳"]),
-            new("late / slowly", ["おそく", "遅く"]),
-
-            new("to turn on / to attach", ["つけます", "付けます"]),
-            new("to arrive / will arrive", ["つきます", "着きます"]),
-            new("merch", ["グッズ", "グッズ"]),
-            new("to go out / head out (outing/activity)", ["でかけます", "出かけます"]),
-            new("to leave / to exit / to come out (general verb for exiting a place)", ["でます", "出ます"]),
-            new("pay, going to pay, will pay", ["はらいます", "払います"]),
-            new("enter/enroll/join", ["はいります", "入ります"]),
-
-            new("many / numerous / a large number of", ["おおい", "多い"]),
-            new("front desk", ["うけつけ", "受付"]),
-            ])
-    ];
 }

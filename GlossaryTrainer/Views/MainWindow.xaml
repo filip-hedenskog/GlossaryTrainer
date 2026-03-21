@@ -8,6 +8,11 @@
         WindowStartupLocation="CenterScreen"
         prism:ViewModelLocator.AutoWireViewModel="True">
 
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{Binding PassShortcutCommand}" />
+        <KeyBinding Key="F2" Command="{Binding FailShortcutCommand}" />
+    </Window.InputBindings>
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
