@@ -21,6 +21,7 @@ public class MainWindowViewModel : BindableBase
     {
         var glossaries = GlossaryRepo.Load();
         AvailableGlossaries = new ObservableCollection<Glossary>(glossaries);
+        SelectedGlossary = AvailableGlossaries.Count != 0 ? AvailableGlossaries.First() : null;
 
         StartCommand = new DelegateCommand(StartQuiz, CanStartQuiz)
             .ObservesProperty(() => SelectedGlossary);
