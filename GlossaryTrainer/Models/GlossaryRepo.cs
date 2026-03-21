@@ -5,10 +5,14 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
-        new("Section 3, unit 28 - Describe health issues",[
+        new("Section 3, unit 29 - Complain about a hotel",[
+            new("advertisement / commercial / ad", ["こうこく", "広告"], Tooltip.Koukoku),
+            new("curtain", ["カーテン"], Tooltip.Kaaten),
+            new("cockroach", ["ゴキブリ"], Tooltip.Gokiburi),
+            new("thin / weak / light (flavor or color)", ["うすい", "薄い"], Tooltip.Usui),
+            new("lukewarm / tepid", ["ぬるい"], Tooltip.Nurui),
 
             ]),
-
         new("Section 3, unit 28 - Describe health issues",[
             new("to put in / to insert / to add (object / reservation)", ["いれます", "入れます"], Tooltip.Iremasu),
             new("What’s wrong? / What happened?", ["どうしましたか"], Tooltip.Doushimashitaka),

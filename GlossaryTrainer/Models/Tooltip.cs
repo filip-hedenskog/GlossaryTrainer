@@ -2,6 +2,106 @@
 
 public static class Tooltip
 {
+    public static string Nurui => """
+        The Japanese word ぬるい (nurui) most commonly means "lukewarm" or "tepid." It describes a temperature that is neither hot nor cold, often in a way that is disappointing or unsatisfying—like coffee that has cooled down or a bath that isn't hot enough. 
+
+        Kanji and Meanings
+        While often written in hiragana alone, it can be written with several kanji depending on the context: 
+        温い: The most common kanji for "lukewarm" or "tepid".
+        Note: This same kanji is read as "nukui" in Western Japan to mean "pleasantly warm".
+        微温い: A more specific way to write "lukewarm," literally "slightly warm".
+        緩い: Used when the word means "lenient," "slack," or "half-hearted". 
+
+        Common Uses
+        Temperature: Used for liquids or environments that have lost their heat or chill.
+        Nurui biiru (ぬるいビール): Lukewarm beer.
+        Furo ga nurui (風呂がぬるい): The bathwater is lukewarm.
+        Metaphorical: Describes a person's attitude or a situation that lacks strictness or intensity.
+        Nurui hito (ぬるい人): Someone who is unenthusiastic or slow to act.
+        Namanurui (生ぬるい): Half-hearted or lukewarm (often used for criticism). 
+
+        Related Terms
+        ぬるま湯 (Nurumayu): Tepid water; often used metaphorically for a "complacent environment".
+        手ぬるい (Tenurui): Lenient, slack, or soft (e.g., a weak response to a problem).
+        """;
+    public static string Usui => """
+        薄い (Usui) is an adjective that primarily means "thin," but its meaning changes depending on what you are describing. 
+        薄かった (Usukatta) is simply the past tense ("It was thin"). 
+        Here are the four most common ways it is used:
+        1. Physical Thickness (Thin)
+        Used for flat objects like paper, books, or clothing. 
+        薄い本 (Usui hon): A thin book.
+        薄いシャツ (Usui shatsu): A thin shirt (lightweight fabric).
+        Opposite: 厚い (Atsui) – Thick. 
+        2. Concentration or Flavor (Weak/Diluted) 
+        Used for liquids, tastes, or smells. 
+        味が薄い (Aji ga usui): The flavor is weak (needs more salt or seasoning).
+        コーヒーが薄い (Koohii ga usui): The coffee is watery/weak.
+        Opposite: 濃い (Koi) – Strong/Concentrated. 
+        3. Color Intensity (Light/Pale)
+        Used for shades of color.
+        薄い青 (Usui ao): Light blue / Pale blue.
+        薄いピンク (Usui pinku): Light pink.
+        Opposite: 濃い (Koi) – Dark/Deep color.
+        4. Density or Probability (Sparse/Slim)
+        Used for things like hair, light, or even chances. 
+        髪が薄い (Kami ga usui): Thinning hair.
+        望みが薄い (Nozomi ga usui): Slim hope / Little chance.
+        """;
+
+    public static string Gokiburi => """
+        Gokiburi (ゴキブリ) is the Japanese word for cockroach.
+        Key Points:
+        Kanji/Katakana: While there is a kanji for it (蜚蠊), it is almost always written in Katakana (ゴキブリ) or sometimes Hiragana (ごきぶり).
+        Slang (G): Because many people in Japan find the word itself unpleasant, they often refer to it simply as "G" (pronounced jii).
+        Example: 「Gが出た！」 (G ga deta! — "A 'G' appeared!")
+        Common Actions:
+        出る (Deru): To appear/show up.
+        「ゴキブリが出ました。」 (Gokiburi ga demashita. — "A cockroach appeared.")
+        退治する (Taiji suru): To exterminate/get rid of.
+        「ゴキブリを退治します。」 (Gokiburi o taiji shimasu.)
+        殺虫剤 (Sacchuuzai): Insecticide/bug spray.
+        Cultural Context:
+        In Japan, especially during the humid summer, "G" management is a big topic. 
+        You will see many products in drugstores specifically for them, 
+        like Gokiburi Hoi-Hoi (a famous brand of sticky traps).
+        """;
+
+    public static string Kaaten => """
+        Explanation
+        カーテン (kaaten) – curtain
+        Refers to the fabric panels that hang in front of windows or doorways to block light, provide privacy, or for decoration.
+        "Close the curtains."
+        カーテンを閉めます。 (Kaaten o shimemasu.)
+        "Open the curtains."
+        カーテンを開けます。 (Kaaten o akemasu.)
+        "I'll buy curtains."
+        カーテンを買います。 (Kaaten o kaimasu.)
+        
+        💡 Grammar note:
+        カーテン is a noun, so it can combine with particles like を (object), に (location), or の (possessive).
+        Often used in contexts related to interior design, home decor, and hospitality.
+        """;
+
+    public static string Koukoku => """
+        Explanation
+        こうこく (広告) – advertisement, commercial, or ad
+        Can refer to:
+        TV commercials
+        Online ads (like banner ads or social media ads)
+        Print advertisements (like flyers or magazine ads)
+        Usage examples:
+        テレビのこうこくをみました。
+        “I saw a TV commercial.”
+        インターネットでこうこくをみます。
+        “I look at online ads.”
+        こうこくがうるさいです。
+        “The advertisements are annoying.”
+        💡 Grammar note:
+        こうこく is a noun, so it can combine with particles like を (object), で (location/tool), or の (possessive).
+        Often used in marketing, media, and consumer contexts.
+        """;
+
     public static string Iremasu => """
         Explanation
 
