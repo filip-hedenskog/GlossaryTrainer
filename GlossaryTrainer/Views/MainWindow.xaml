@@ -11,6 +11,7 @@
     <Window.InputBindings>
         <KeyBinding Key="F1" Command="{Binding PassShortcutCommand}" />
         <KeyBinding Key="F2" Command="{Binding FailShortcutCommand}" />
+        <KeyBinding Key="F3" Command="{Binding RevealShortcutCommand}" />
     </Window.InputBindings>
 
     <Grid Margin="20">

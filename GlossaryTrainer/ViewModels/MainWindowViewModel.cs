@@ -36,6 +36,7 @@ public class MainWindowViewModel : BindableBase
 
         PassShortcutCommand = new DelegateCommand(OnPassShortcut);
         FailShortcutCommand = new DelegateCommand(OnFailShortcut);
+        RevealShortcutCommand = new DelegateCommand(OnRevealShortcut);
     }
 
     public bool CanRunPassOrFailedCommand { get; set; }
@@ -55,6 +56,17 @@ public class MainWindowViewModel : BindableBase
 
         UserInput = Guid.NewGuid().ToString();
         Submit();
+    }
+
+    private void OnRevealShortcut()
+    {
+        if (!CanRunPassOrFailedCommand)
+            return;
+
+        var current = _items[_currentIndex];
+        FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
+        FeedbackColor = Brushes.Blue;
+        PlayRevealSound();
     }
 
     public ObservableCollection<Glossary> AvailableGlossaries { get; }
@@ -87,6 +99,7 @@ public class MainWindowViewModel : BindableBase
     public DelegateCommand SelectGlossaryCommand { get; }
     public DelegateCommand PassShortcutCommand { get; }
     public DelegateCommand FailShortcutCommand { get; }
+    public DelegateCommand RevealShortcutCommand { get; }
 
     private void StartQuiz()
     {
@@ -320,6 +333,11 @@ public class MainWindowViewModel : BindableBase
         _currentIndex = 0;
         _correctAnswers = 0;
         FailedItems.Clear();
+    }
+
+    public void PlayRevealSound()
+    {
+        PlaySound("Reveal.wav");
     }
 
     public void PlayCorrectSound()
