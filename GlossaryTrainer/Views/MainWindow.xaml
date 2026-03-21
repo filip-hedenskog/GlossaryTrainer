@@ -64,9 +64,11 @@
                 FontFamily="Yu Gothic UI"
                 FontWeight="Bold"
                 Margin="0,0,0,10"
+                Background="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
                 VerticalContentAlignment="Center">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
+                        <!--<Setter Property="Background" Value="Green"/>-->
                         <Setter Property="IsEnabled" Value="True"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding IsFinished}" Value="True">
