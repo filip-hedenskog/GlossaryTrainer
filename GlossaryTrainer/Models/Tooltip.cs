@@ -2,6 +2,239 @@
 
 public static class Tooltip
 {
+    public static string Suiei => """
+        Kanji: 水泳
+        Type: Noun (can be used as a Suru-verb: 水泳する) 
+
+        1. Definition:
+        Swimming.
+        Refers to swimming as a sport, a school subject, or a general concept. 
+
+        3. Common Phrases:
+        水泳部 (Suiei-bu): Swimming club.
+        水泳大会 (Suiei taikai): Swimming meet/competition.
+        水泳をならう (Suiei o narau): To take swimming lessons.
+        4. Example Sentences:
+        しょうがくせいのとき、たいいくで 水泳を ならいました。
+        (Shōgakusei no toki, taiiku de suiei o naraimashita.)
+        When I was an elementary student, I learned swimming in P.E.
+        たまに、こうがいの プールで 水泳を します。
+        (Tamani, kōgai no pūru de suiei o shimasu.)
+        Occasionally, I do swimming at a pool in the suburbs.
+        5. Learner's Tip (Contrast with 泳ぎます):
+        Think of 水泳 as the "name of the activity" and およぎます (oyogimasu) as the "action of moving in the water."
+        Use 水泳 for hobbies or classes: 「しゅみは 水泳 です」 (My hobby is swimming).
+        Use およぎます for the physical act: 「いま、うみで およいでいます」 (I am swimming in the sea right now). 
+        """;
+    public static string Taiiku => """
+        Kanji: 体育
+        Type: Noun
+
+        1. Definition:
+        Physical Education (P.E.); gym class; athletics.
+        In Japanese schools, this refers to the subject where students do sports, exercise, and learn about health.
+
+        3. Common Phrases:
+        体育の時間 (Taiiku no jikan): P.E. class time.
+        体育館 (Taiikukan): Gymnasium / Sports hall.
+        体育着 (Taiikugi): P.E. uniform / gym clothes.
+
+        4. Example Sentences:
+        小学生のとき、体育が大好きでした。
+        (Shōgakusei no toki, taiiku ga daisuki deshita.)
+        When I was an elementary school student, I loved P.E.
+        たまに、体育かんでバスケットボールをします。
+        (Tamani, taiikukan de basukettobōru o shimasu.)
+        Occasionally, I play basketball in the gym.
+
+        5. Learner's Tip:
+        In Japan, schools have a special event called 体育の日 (Taiiku no Hi - Health and Sports Day) or a 体育祭 (Taiikusai - Sports Festival), where the whole school competes in various athletic events. 
+        """;
+    public static string Shougakusei => """
+        Kanji: 小学生
+        Type: Noun
+
+        1. Definition:
+        Elementary school student; primary school child.
+        In Japan, this refers to children in grades 1 through 6 (typically ages 6 to 12).
+
+        3. Common Phrases:
+        小学生のとき (Shōgakusei no toki): When I was an elementary school student.
+        新一年生 (Shin-ichinensei): A new first-grade student.
+        ランドセル (Randoseru): The iconic firm-sided backpack worn by shōgakusei.
+
+        4. Example Sentences:
+        小学生のとき、そろばんをならいました。
+        (Shōgakusei no toki, soroban o naraimashita.)
+        When I was an elementary school student, I learned the abacus.
+        たまに、こうがいのしょうがっこうをみます。
+        (Tamani, kōgai no shōgakkō o mimasu.)
+        Occasionally, I see an elementary school in the suburbs.
+
+        5. Learner's Tip:
+        The word for the school building itself is しょうがっこう (Shōgakkō). To talk about the student, you add せい (sei), which means "student."
+        """;
+    public static string Naraimasu => """
+        Kanji: 習います
+        Type: Verb (Group 1 / U-verb)
+
+        1. Definition:
+        To learn; to take lessons.
+        Specifically used when learning from a teacher, a mentor, or in a structured environment like a school or class.
+
+        2. Dictionary Form:
+        ならう (Narau) — 習う
+
+        3. Common Phrases:
+        日本語を習います (Nihongo o naraimasu): I learn Japanese (from a teacher).
+        ピアノを習います (Piano o naraimasu): I take piano lessons.
+        せんせいに習います (Sensei ni naraimasu): I learn from a teacher.
+
+        4. Example Sentences:
+        こどものとき、そろばんを習いました。
+        (Kodomo no toki, soroban o naraimashita.)
+        When I was a child, I learned the abacus.
+        たまに、こうがいのテニススクールで習います。
+        (Tamani, kōgai no tenisu sukūru de naraimasu.)
+        Occasionally, I take lessons at a tennis school in the suburbs.
+
+        5. Learner's Tip:
+        Don't confuse ならう (Narau) with べんきょうする (Benkyō suru).
+        ならう: Learning from someone else (lessons/coaching).
+        べんきょうする: To study (general effort, self-study, or academic work).
+        """;
+    public static string Tamani => """
+        Kanji: 偶に
+        Type: Adverb
+        1. Definition:
+        Occasionally; once in a while; sometimes.
+        Used for actions that happen infrequently or at irregular intervals.
+
+        3. Comparison (Frequency):
+        ときどき (Tokidoki): Sometimes (approx. 50%)
+        たまに (Tamani): Occasionally (approx. 10-20%)
+
+        4. Example Sentences:
+        たまに、こうがいのカフェにいきます。
+        (Tamani, kōgai no kafe ni ikimasu.)
+        Occasionally, I go to a cafe in the suburbs.
+        たまに、こどものときのことをおもいだします。
+        (Tamani, kodomo no toki no koto o omoidashimasu.)
+        Once in a while, I remember things from when I was a child.
+
+        5. Learner's Tip:
+        Adding は (wa) makes it たまには (Tamani wa), which means "for a change" or "once in a blue moon."
+        Example: たまには、あめをたべます。 (Tamani wa, ame o tabemasu.) — I'll eat some candy for a change.
+        """;
+    public static string KodomoNoToki => """
+        Kanji: 子供の時 / 子どもの時
+
+        1. Definition:
+        When [I/someone] was a child; in childhood.
+        A very common way to introduce a nostalgic story or a past habit.
+
+        2. Example Sentences:
+        こどものとき、あめがだいすきでした。
+        (Kodomo no toki, ame ga daisuki deshita.)
+        When I was a child, I loved candy.
+        こどものときは、こうがいにすんでいました。
+        (Kodomo no toki wa, kōgai ni sunde imashita.)
+        When I was a child, I lived in the suburbs.
+        5. Learner's Tip:
+        You can use this same structure with other stages of life:
+        がくせいのとき (Gakusei no toki): When I was a student.
+        わかいとき (Wakai toki): When I was young.
+        """;
+
+    public static string Kougai => """
+        Kanji: 郊外
+        Type: Noun
+        1. Definition:
+        Suburbs; outskirts. Refers to the residential areas located on the outer edges of a city.
+        2. Common Phrases:
+        郊外に住む (Kōgai ni sumu): To live in the suburbs.
+        郊外へ行く (Kōgai e iku): To go to the outskirts.
+        静かな郊外 (Shizukana kōgai): A quiet suburb.
+        3. Example Sentence:
+        こうがいは、まちよりしずかです。
+        (Kōgai wa, machi yori shizuka desu.)
+        The suburbs are quieter than the city.
+        4. Learner's Tip:
+        In Japan, many people live in the こうがい and commute to the としん (Toshin - city center) by train. It’s the perfect word for describing a peaceful neighborhood just outside a busy hub like Tokyo or Osaka.
+        """;
+    public static string Hokano => """
+        Explanation (minimal kanji)
+
+        ほかの – other / another / different
+        used before a noun
+
+        Examples:
+
+        ほかのひと – “another person / other people”
+        ほかのほん – “another book”
+        ほかのくに – “another country”
+
+        💡 Notes:
+
+        ほかの + noun is the common pattern
+        sometimes written 他の, but ほかの is very common and easy for learners
+
+        Example:
+
+        ほかのメニューをみます – “i will look at another menu”
+        """;
+
+    public static string Warui => """
+        Explanation (minimal kanji)
+        わるい (悪い) – bad, poor, or wrong
+        an い-adjective
+
+        Examples:
+
+        てんきがわるい – “the weather is bad”
+        きぶんがわるい – “i feel sick / unwell”
+        それはわるいことです – “that is a bad thing”
+
+        💡 Notes:
+
+        can describe quality (bad food, bad weather)
+        can describe condition (feeling sick)
+        can describe behavior (doing something wrong)
+
+        Example:
+
+        ごめんなさい、わるかった – “sorry, that was my fault / i was wrong”
+        """;
+    public static string Betabeta => """
+        Explanation (minimal kanji)
+        ベタベタ – describes something sticky, greasy, or unpleasantly wet
+        often used for hands, skin, food, or weather
+        this is an onomatopoeia-style word (sound/feeling word)
+
+        Examples:
+
+        てがベタベタです – “my hands are sticky”
+        なつはあつくてベタベタします – “in summer it is hot and sticky”
+
+        💡 Notes:
+
+        often used with する: ベタベタする – “to be sticky / greasy”
+        the repeated sound (ベタベタ) is common in japanese words that describe texture or feeling
+        """;
+
+    public static string Kudamono => """
+        Kudamono (果物) is the Japanese word for fruit. 
+
+        It is the standard, colloquial term you would use when buying fruit at a supermarket or referring to fruit as a snack.
+
+        Breakdown of the Word
+        The word is composed of two kanji characters: 
+        果 (kuda/ka): Means fruit, reward, or result.
+        物 (mono): Means thing or object. 
+
+        Literally translated, it means "fruit thing".
+        """;
+
     public static string Nurui => """
         The Japanese word ぬるい (nurui) most commonly means "lukewarm" or "tepid." It describes a temperature that is neither hot nor cold, often in a way that is disappointing or unsatisfying—like coffee that has cooled down or a bath that isn't hot enough. 
 

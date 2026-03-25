@@ -76,18 +76,22 @@
                 FontSize="24"
                 FontWeight="Bold"
                 HorizontalAlignment="Center"
+                TextWrapping="Wrap"
+                MaxHeight="100"
                 Margin="0,0,0,20"/>
 
             <TextBox
                 x:Name="UserInputTextBox"
                 Text="{Binding UserInput, UpdateSourceTrigger=PropertyChanged}"
-                Height="42"
+                MinHeight="42"
+                MaxHeight="126"
                 FontSize="30"
-                FontFamily="Yu Gothic UI"
+                FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
                 FontWeight="Bold"
                 Margin="0,0,0,10"
                 Background="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
-                VerticalContentAlignment="Center">
+                TextWrapping="Wrap"
+                VerticalContentAlignment="Top">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
                         <!--<Setter Property="Background" Value="Green"/>-->
@@ -110,7 +114,7 @@
 
             <TextBlock Text="{Binding FeedbackText}"
                        Foreground="{Binding FeedbackColor}"
-                       FontFamily="Yu Gothic UI"
+                       FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
                        FontWeight="Bold"
                        FontSize="30"
                        HorizontalAlignment="Left"

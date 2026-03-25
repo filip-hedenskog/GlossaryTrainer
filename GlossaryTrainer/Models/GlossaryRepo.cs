@@ -2,16 +2,121 @@
 
 internal static class GlossaryRepo
 {
+    //new("", ["", ""]),
     public static List<Glossary> Load()
     =>
     [
+        new("Section 4, unit 2 - Describe health habits",[
+            new("influenza", ["インフルエンザ"]),
+            new("throat", ["のど", "喉"]),
+            new("appointment (booking services, events, meetings)", ["よやく", "予約"]),
+            new("belly / stomach", ["おなか", "お腹"]),
+            new("carrot", ["にんじん", "人参"]),
+            new("yogurt", ["ヨーグルト"]),
+            new("one time / once (per week/month/year, more formal or abstract)", ["いちど", "一度"]),
+            new("one time / once (physical times/occurrences or actions, per day/event/attempt)", ["いっかい", "一回"]),
+            new("once per day", ["うちにちにいっかい", "一日に一回"]),
+            new("fried food", ["あげもの", "揚げ物"]),
+            new("greasy/oily/too fatty", ["あぶらっこい", "油っこい"]),
+            new("quite a bit / quite often", ["けっこう", "結構"]),
+            new("how often / how much / how long / about how", ["どれぐらい"]),
+            new("from now on / from here on / starting now", ["これから", "今後"]),
+            new("phone (portable / something you carry)", ["けいたい", "携帯"]),
+            new("alcohol (sake / alcoholic drinks)", ["おさけ", "お酒"]),
+            new("late at night", ["よなか", "夜中"]),
+
+            new("I do strength training almost every day.", ["ほとんど毎日きんトレをします。", "ほとんど毎日筋トレをします。"]),
+            new("I don't smoke at all.", ["たばこはぜんぜんすいません。", "煙草は全然吸いません。"]),
+            new("I take medicine three times a day.", ["いちにちにさんかいくすりをのみます。", "一日に三回薬を飲みます。"]),
+            new("I watch a movie once a week.", ["いっしゅうかんにいちどえいがをみます。", "一週間に一度映画を見ます。"]),
+            new("I travel once a year.", ["いちねんにいちどりょこうします。", "一年に一度旅行します。"]),
+            new("I do cycling four times a month", ["一か月に四回サイクリングをします。"])
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+        ]),
+
+        new("Section 4, unit 1 - Use past tense negative adjectives",[
+            //new("To have an argument, to bicker, to get into a fight",["けんかします", "喧嘩します"]),
+            //new("the worst　/ worst case scenario", ["さいあく", "最悪"]),
+            //new("This time, on this occasion, this round", ["こんかい", "今回"]),
+            //new("line / queue", ["れつ", "列"]),
+            //new("acting / performance", ["えんぎ", "演技"]),
+            //new("only (no more than this)", ["だけ"]),
+            //new("disappointing", ["ざんねん", "残念"]),
+            //new("app (smart phone / computer app)", ["アプリ"]),
+            //new("to break up (couple) / to part ways (goodbye's after hanging out)", ["わかれます", "別れます"]),
+            //new("surely / definitely / most likely", ["きっと"]),
+            //new("problem / question / issue", ["もんだい", "問題"]),
+            new("haunted house / haunted attraction", ["おばけやしき", "お化け屋敷"]),
+            new("is crowded / is packed", ["こんでいます", "混んでいます"]),
+            new("floor", ["ゆか", "床"]),
+            new("scene / situation (in movie, story, real life)", ["シーン"]),
+            new("hard (like stone or metal)", ["かたい", "硬い"]),
+            new("main dish", ["メイン"]),
+
+            new("Only the fruit was tasty.", ["くだものだけおいしかったです。", "果物だけ美味しかったです。"]),
+            new("It was a very disappointing date, you know.", ["とてもざんねんなデートでしたね。", "とても残念なデートでしたね。", "デートはとても残念でしたね。"]),
+            new("I met a nice person on this app last week.", ["先週このアプリでいい人に会いました。"]),
+            new("I'll break up with my boyfriend soon.", ["もうすぐかれしとわかれます。", "もうすぐ彼氏と別れます。"]),
+            new("I'm sure I'll find a lovelier partner.", ["きっともっとすてきなパートナーをみつけます。", "きっともっと素敵なパートナーを見つけます。"]),
+            new("This time the date wasn't fun at all. My boyfriend hardly talked with me.", ["こんかいデートはぜんぜんたのしくなかったです。かれしは私とあまり話しませんでした。", "今回デートは全然楽しくなかったです。彼氏は私とあまり話しませんでした。"]),
+            new("I had a fight with my new girlfriend.", ["新しいかのじょとけんかしました。", "新しい彼女と喧嘩しました。"]),
+            new("There were other (of the same set) problems too.", ["ほかのもんだいもありました。", "他の問題もありました。"]),
+            new("The acting was the worst.", ["えんぎはさいあくでした。", "演技は最悪でした。"]),
+            new("We waited in a line for two hours.", ["れつでにじかんまちました。","列で二時間待ちました。"])
+
+        ]),
+
+        new("Section 3, unit 30 - Talk about your childhood",[
+            //new("candy", ["あめ", "飴"]),
+            //new("suburb", ["こうがい", "郊外"], Tooltip.Kougai),
+            //new("occasionally; once in a while; sometimes", ["たまに", "偶に"], Tooltip.Tamani),
+            //new("To learn; to take lessons", ["ならいます", "習います"], Tooltip.Naraimasu),
+            //new("kindergarten", ["ようちえん", "幼稚園"]),
+            //new("Elementary school student, grade 1->6, age 6-12", ["しょうがくせい", "小学生"], Tooltip.Shougakusei),
+            //new("Middle school student, grade 7->9, age 12-15", ["ちゅうがくせい", "中学生"]),
+            //new("High school student, grade 10-12, age 15-18", ["こうこうせい", "高校生"]),
+            //new("Physical education, P.E.", ["たいいく", "体育"], Tooltip.Taiiku),
+            //new("swimming as sport / school subject / general concept", ["すいえい", "水泳"], Tooltip.Suiei),
+            //new("art (subject / field of study / generally (paintings, sculptures))", ["びじゅつ", "美術"]),
+            //new("school uniform", ["せいふく", "制服"]),
+            //new("Strict; severe; tough", ["きびしい","厳しい"]),
+            //new("Was cool; was handsome; was stylish.", ["かっこよかった"]),
+            //new("Convention; tournament (whole); meet; mass meeting.", ["たいかい", "大会"]),
+            //new("Boxing", ["ボクシング"]),
+            //new("Jogging", ["ジョギング"]),
+            //new("karate", ["からて", "空手"]),
+
+            new("When I a child", ["こどものとき", "子供の時"], Tooltip.KodomoNoToki),
+            new("When I was six years old", ["ろくさいのとき", "六歳の時"]),
+            new("When I was an elementary school student, I learned swimming in PE.", ["しょうがくせいのとき、たいいくですいえいをならいました。", "小学生の時、体育で水泳を習いました。"]),
+            new("I’m glad I occasionally took swimming lessons when I was in kindergarten.", ["ようちえんのとき、たまにすいえいをならってよかったです。", "幼稚園の時、偶に水泳を習ってよかったです。"]),
+            new("The uniform rules in my high school were strict.", ["こうこうのせいふくのきそくはきびしかったです。", "高校の制服の規則は厳しかったです。"]),
+            new("I probably want to become a manga artist.", ["たぶんまんがかになりたいです。", "多分漫画家になりたいです。"]),
+            new("When I was a middle school student, I participated in a boxing tournament.", ["ちゅうがくせいのとき、ボクシングのたいかいにでました。", "中学生の時、ボクシングの大会に出ました。"]),
+            new("The high school students' uniforms were very cool.", ["こうこうせいのせいふくはとてもかっこよかったです。", "高校生の制服はとてもかっこよかったです。"]),
+            new("I occasionally go jogging in a park in the suburbs.", ["たまにこうがいのこうえんでジョギングをします。", "偶に郊外の公園でジョギングをします。"]),
+            new("The art teacher was occasionally strict.", ["びじゅつのせんせいはたまにきびしかったです。", "美術の先生は偶に厳しかったです。"]),
+            new("When I was in kindergarten, I occasionally received candy from my teacher.", ["ようちえんのとき、たまにせんせいからあめをもらいました。", "幼稚園の時、偶に先生からあめを貰いました。", "幼稚園の時、偶に先生から飴を貰いました。"]),
+            ]),
         new("Section 3, unit 29 - Complain about a hotel",[
             new("advertisement / commercial / ad", ["こうこく", "広告"], Tooltip.Koukoku),
             new("curtain", ["カーテン"], Tooltip.Kaaten),
             new("cockroach", ["ゴキブリ"], Tooltip.Gokiburi),
             new("thin / weak / light (flavor or color)", ["うすい", "薄い"], Tooltip.Usui),
             new("lukewarm / tepid", ["ぬるい"], Tooltip.Nurui),
-
+            new("fruit", ["くだもの", "果物"], Tooltip.Kudamono),
+            new("cereal", ["シリアル"]),
+            new("sticky / greasy / clingy", ["ベタベタ"], Tooltip.Betabeta),
+            new("bad / poor / wrong", ["わるい", "悪い"], Tooltip.Warui),
+            new("other / another / different (other of the same set)", ["ほかの", "他の"], Tooltip.Hokano),
+            new("other / another / different (other option, not necessarily same set)", ["べつの", "別の"]),
             ]),
         new("Section 3, unit 28 - Describe health issues",[
             new("to put in / to insert / to add (object / reservation)", ["いれます", "入れます"], Tooltip.Iremasu),
@@ -30,6 +135,7 @@ internal static class GlossaryRepo
             new("for a while / for some time", ["しばらく"], Tooltip.Shibaraku),
             new("to get better / to recover / to be fixed", ["なおります", "治ります"], Tooltip.Naorimasu),
             new("to paint / to apply / to spread", ["ぬります", "塗ります"], Tooltip.Nurimasu),
+
         ]),
 
         new("Section 3, unit 27 - Use past tense adjectives",[
@@ -69,6 +175,21 @@ internal static class GlossaryRepo
 
             new("many / numerous / a large number of", ["おおい", "多い"]),
             new("front desk", ["うけつけ", "受付"]),
-            ])
+            ]),
+        new("Practice sentences",[
+            new("We should get off at the next station.",["つぎのえきでおりましょう。", "次の駅で降りましょう。"]),
+            new("My younger brother also enrolled at a university last year.",["きょねんおとうともだいがくにはいりました。", "去年弟も大学に入りました。"]),
+            new("The office is on the tenth floor of the building.", ["オフィスはたてもののじゅっかいです。", "オフィスは建物の十階です。"]),
+            new("I don't want to talk with the company people.", ["かいしゃのひととはなしたくないです。", "会社の人と話したくないです。"]),
+            new("The nearby supermarket closes at six o'clock.", ["ちかくのスーパーはろくじにしまります。", "近くのスーパーは六時に締まります。"]),
+
+
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+        ]),
     ];
+
 }

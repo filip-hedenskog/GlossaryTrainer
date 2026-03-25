@@ -57,7 +57,7 @@ public class MainWindowViewModel : BindableBase
         if (!CanRunPassOrFailedCommand)
             return;
 
-        UserInput = Guid.NewGuid().ToString();
+        UserInput = "<Manually failed>";
         Submit();
     }
 
@@ -67,7 +67,7 @@ public class MainWindowViewModel : BindableBase
             return;
 
         var current = _items[_currentIndex];
-        FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
+        FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}";
         FeedbackColor = Brushes.DodgerBlue;
         PlayRevealSound();
     }
@@ -212,19 +212,20 @@ public class MainWindowViewModel : BindableBase
         var current = _items[_currentIndex];
 
         bool isCorrect = current.ValidTranslations
-                           .Any(v => string.Equals(UserInput?.Trim(), v, StringComparison.OrdinalIgnoreCase));
+                           .Any(v => string.Equals(UserInput?.Trim().TrimEnd('。'), v.TrimEnd('。'), StringComparison.OrdinalIgnoreCase));
 
         if (isCorrect)
         {
             _correctAnswers++;
-            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
+            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}";
             FeedbackColor = Brushes.SeaGreen;
             CurrentTooltip = current.Tooltip;
             PlayCorrectSound();
         }
         else
         {
-            FeedbackText = $"Wrong! Correct answer:{Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
+            FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}" + Environment.NewLine +
+            $"Your answer:" + Environment.NewLine + UserInput;
             FeedbackColor = Brushes.Red;
             FailedItems.Add(current);
             CurrentTooltip = current.Tooltip;
