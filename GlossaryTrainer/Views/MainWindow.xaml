@@ -87,9 +87,9 @@
                 MaxHeight="126"
                 FontSize="30"
                 FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
-                FontWeight="Bold"
                 Margin="0,0,0,10"
-                Background="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
+                Background="#05001f"
+                Foreground="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
                 TextWrapping="Wrap"
                 VerticalContentAlignment="Top">
                 <TextBox.Style>
@@ -115,7 +115,6 @@
             <TextBlock Text="{Binding FeedbackText}"
                        Foreground="{Binding FeedbackColor}"
                        FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
-                       FontWeight="Bold"
                        FontSize="30"
                        HorizontalAlignment="Left"
                        Margin="0,5,0,10"/>
