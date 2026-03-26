@@ -3,8 +3,6 @@ using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
-using System.Media;
-using System.Numerics;
 using System.Text.Json;
 using System.Windows.Media;
 
@@ -218,7 +216,7 @@ public class MainWindowViewModel : BindableBase
         {
             _correctAnswers++;
             FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}";
-            FeedbackColor = Brushes.SeaGreen;
+            FeedbackColor = positiveFeedbackColor;
             CurrentTooltip = current.Tooltip;
             PlayCorrectSound();
         }
@@ -226,7 +224,7 @@ public class MainWindowViewModel : BindableBase
         {
             FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}" + Environment.NewLine +
             $"Your answer:" + Environment.NewLine + UserInput;
-            FeedbackColor = Brushes.Red;
+            FeedbackColor = negativeFeedbackColor;
             FailedItems.Add(current);
             CurrentTooltip = current.Tooltip;
             PlayFailedSound();
@@ -235,7 +233,8 @@ public class MainWindowViewModel : BindableBase
         _currentIndex++;
         LoadCurrent();
     }
-
+    private static readonly SolidColorBrush positiveFeedbackColor = new((Color)ColorConverter.ConvertFromString("#52ff8b"));
+    private static readonly SolidColorBrush negativeFeedbackColor = new((Color)ColorConverter.ConvertFromString("#ff5996"));
     private bool CanSubmit()
         => !string.IsNullOrWhiteSpace(UserInput);
 
