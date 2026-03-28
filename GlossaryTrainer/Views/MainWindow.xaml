@@ -75,7 +75,7 @@
                 Text="{Binding CurrentWord}"
                 FontSize="24"
                 FontWeight="Bold"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 TextWrapping="Wrap"
                 MaxHeight="100"
                 Margin="0,0,0,20"/>
