@@ -6,6 +6,38 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
+        new("Section 4, unit 5 - Describe a wedding",[
+            new("I rented a limousine with my family.", ["かぞくとリムジンをかりました。", "家族とリムジンを借りました。"]),
+            new("The venue wasn't big.", ["かいじょうは大きくなかったです。", "会場は大きくなかったです。"]),
+            new("The venue wasn't close.", ["かいじょうは近くなかったです。", "会場は近くなかったです。"]),
+            new("The wedding decorations weren't pretty.", ["けっこんしきのデコレーションはきれいじゃなかったです。", "結婚式のデコレーションは綺麗じゃなかったです。"]),
+            new("The bride's dress was elegant.", ["しんぷのドレスうつくしかったです。", "新婦のドレスは美しかったです。"]),
+            new("The guests were not lively.", ["ゲストはにぎやかじゃなかったです。", "ゲストは賑やかじゃなかったです。"]),
+            new("I greeted Ken's father.", ["けんさんのお父さんにあいさつしました。", "けんさんのお父さんに挨拶しました。"]),
+            new("The groom's relatives weren't kind.", ["しんろうのしんせきはやさしくなかったです。", "新郎の親戚は優しくなかったです。"]),
+            new("The carpet/rug's color was hideous.", ["カーペットの色はダサかったです。"]),
+            new("The cake's flavor was very weird.", ["ケーキのあじはとてもへんでした。", "ケーキの味はとても変でした。"]),
+            new("The tables were low.", ["テーブルはひくかったです。", "テーブルは低かったです。"]),
+            new("The jazz band's performance was terrible.", ["ジャズバンドのパフォーマンスはひどかったです。", "ジャズバンドのパフォーマンスは酷かったです。"]),
+            new("The singer's song was terrible.", ["かしゅのうたはひどかったです。", "歌手の歌は酷かったです。"]),
+            new("Because the limousine was expensive, we took a bus.", ["リムジンは高かったので、バスに乗りました。"]),
+            new("After the meal, there was a boring speech.", ["ご飯の後、詰まらないスピーチがありました。"]),
+            new("The day before yesterday, I did nothing all day.", ["おとといいちにちじゅう何もしませんでした。", "一昨日一日中何もしませんでした。"]),
+            
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", []),
+            ]
+        ),
+
         new("Section 4, unit 4 - Discuss what to eat",[
             new("family restaurant (casual chain restaurant)", ["ファミレス"]),
             new("drink bar / self-service beverage station", ["ドリンクバー"]),
@@ -68,7 +100,7 @@ internal static class GlossaryRepo
             new("Would you like to go somewhere?", ["どこかに行きませんか。"]),
             new("Let's go to a pool in Shibuya!", ["渋谷のプールに行きましょう。"]),
             new("Because it’s cheap, let’s go to the nearby beach.", ["安いので、近くの海に行きましょう。"]),
-            new("Because it's pretty, we should sit here.", ["きれいなので、ここにすわりましょう。","綺麗なので、ここに座りましょう。"]),
+            new("Because the view is pretty, we should sit here.", ["けしきがきれいなので、ここにすわりましょう。","景色が綺麗なので、ここに座りましょう。"]),
             new("Because it's close,  let's walk to that spot over there.", ["近いので、あのばしょまであるきましょう。", "近いので、あの場所まで歩きましょう。"]),
             new("most / number one / the best in a group", ["いちばん", "一番"]),
             new("How about the nearest/closest beach?", ["一番近い海はどうですか。"]),
@@ -85,7 +117,7 @@ internal static class GlossaryRepo
             new("I changed already.", ["おうきがえました。","もう着替えました。"]),
             new("We should quickly change / Let's change quickly.", ["はやくきがえましょう。", "速く着替えましょう。"]),
             new("I dropped my phone somewhere.", ["どこかでけいたいをおとしました。", "どこかで携帯を落としました。"]),
-            new("It's fairly / reasonably / quite / pretty much close.", ["けっこう近いです。"]),
+            new("It's fairly / reasonably / quite / pretty much close.", ["けっこう近いです。", "結構近いです。"]),
             new("I want to go surfing.", ["サーフィンがしたいです。"]),
             ]
         ),
