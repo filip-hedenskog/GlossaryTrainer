@@ -6,6 +6,34 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
+        new("Section 4, unit 6 - Make plans to go out",[
+            new("actress", ["じょゆう", "女優"]),
+            new("genre", ["ジャンル"]),
+            new("arcade / game center", ["ゲームセンター"]),
+            new("parfait (dessert, layers of ice cream, fruit, syrup, whipped cream)", ["パフェ"]),
+            new("bowling", ["ボウリング"]),
+            new("earring", ["イヤリング"]),
+            new("shopping mall", ["ショッピングモール"]),
+            new("tower", ["タワー"]),
+            new("Japanese-style pub / bar / casual drinking restaurant", ["いざかや", "居酒屋"]),
+            
+            new("The ending of the movie was sad. (focus on identifying what was sad)", ["えいがのけつまつがかなしかったです。", "映画の結末が悲しかったです。"]),
+            new("Would you like to go see a comedy movie?", ["コメディえいがをみに行きませんか。", "コメディ映画を見に行きませんか。"]),
+            new("Would you like to go eat a parfait?", ["パフェを食べに行きませんか。"]),
+            new("After the movie, would you like to go drink?", ["映画の後、飲みに行きませんか。"]),
+            new("Let's go eat caramel somewhere.", ["どこかにキャラメルを食べに行きましょう。"]),
+            new("Would you like to go to Ueno to buy books?", ["上野に本を買いに行きませんか。"]),
+            new("After that, let's go to Shinjuku to hang out together.", ["その後、いっしょにしんじゅくにあそびに行きましょう。", "その後、一緒に新宿に遊びに行きましょう。"]),
+            new("Yes, sounds good. (seeking agreement or confirmation)", ["はい、いいですね。"]),
+            new("That also sounds good. (seeking agreement or confirmation)", ["それもいいですね。"]),
+            new("No, it's not good at all.", ["いいえ、ぜんぜんよくないです。", "いいえ、全然よくないです。"]),
+            new("There's a nice movie theater south of the station.", ["駅の南にいい映画館があります。"]),
+            new("The movie theater south of the department store is cheap.", ["デパートの南の映画館は安いです。"]),
+            new("Tokyo’s night view is pretty.", ["東京の夜のけしきはきれいです。", "東京の夜の景色は綺麗です。"]),
+
+            ]
+        ),
+
         new("Section 4, unit 5 - Describe a wedding",[
             new("I rented a limousine with my family.", ["かぞくとリムジンをかりました。", "家族とリムジンを借りました。"]),
             new("The venue wasn't big.", ["かいじょうは大きくなかったです。", "会場は大きくなかったです。"]),
@@ -23,7 +51,8 @@ internal static class GlossaryRepo
             new("Because the limousine was expensive, we took a bus.", ["リムジンは高かったので、バスに乗りました。"]),
             new("After the meal, there was a boring speech.", ["ご飯の後、詰まらないスピーチがありました。"]),
             new("The day before yesterday, I did nothing all day.", ["おとといいちにちじゅう何もしませんでした。", "一昨日一日中何もしませんでした。"]),
-            
+            new("I went to the wedding by limo with some other people.", ["ほかの人とリムジンでけっこんしきに行きました。", "他の人とリムジンで結婚式に行きました。"]),
+
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -252,7 +281,7 @@ internal static class GlossaryRepo
             new("shelf", ["たな", "棚"]),
             new("husband", ["だんなさん", "旦那さん"]),
             new("wife", ["おくさん", "奥さん"]),
-            new("entryway", ["げんかん", "玄関"]),
+            new("entrance / entryway / front door area of a house", ["げんかん", "玄関"]),
             new("to wear (lower body / feet)", ["はきます", "履きます"]),
             new("to wear (upper body / whole body)", ["きます", "着ます"]),
             new("whose", ["だれの", "誰の"]),
@@ -285,6 +314,8 @@ internal static class GlossaryRepo
 
             new("many / numerous / a large number of", ["おおい", "多い"]),
             new("front desk", ["うけつけ", "受付"]),
+            new("comfortable / pleasant / cozy", ["かいてき", "快適"]),
+            new("drawer (in desk, cabinet, furniture)", ["ひきだし", "引き出し"]),
             ]),
         new("Practice sentences",[
             new("We should get off at the next station.",["つぎのえきでおりましょう。", "次の駅で降りましょう。"]),
@@ -294,7 +325,11 @@ internal static class GlossaryRepo
             new("The nearby supermarket closes at six o'clock.", ["ちかくのスーパーはろくじにしまります。", "近くのスーパーは六時に締まります。"]),
             new("Where did you get hit?", ["どこを打ちましたか。", "どこを打ちましたか。"]),
             new("Do you have free time?", ["ひまな時間がありますか。", "暇な時間がありますか。"]),
-
+            new("I'm still at home", ["まだ家にいます。"]),
+            new("How do we get to the neighboring town?", ["となりのまちまでどうやって行きますか。", "隣の町までどうやって行きますか。"]),
+            new("I moved from the countryside to a city.", ["いなかからとしにひっこしました。", "田舎から町に引っ越しました。"]),
+            new("I will be busy on July 3rd.", ["七月三日はいそがしいです。", "七月三日は忙しいです。"]),
+            new("I will work on August 10th. (in general, usually part of job)", ["八月十日[は/に]はたらきます。", "八月十日は働きます。", "八月十日に働きます。"]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
