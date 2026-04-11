@@ -215,14 +215,14 @@ public class MainWindowViewModel : BindableBase
         if (isCorrect)
         {
             _correctAnswers++;
-            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}";
+            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
             FeedbackColor = positiveFeedbackColor;
             CurrentTooltip = current.Tooltip;
             PlayCorrectSound();
         }
         else
         {
-            FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}" + Environment.NewLine +
+            FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}" + Environment.NewLine +
             $"Your answer:" + Environment.NewLine + UserInput;
             FeedbackColor = negativeFeedbackColor;
             FailedItems.Add(current);
