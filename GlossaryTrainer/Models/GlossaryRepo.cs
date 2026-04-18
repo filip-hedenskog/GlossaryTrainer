@@ -447,7 +447,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("next semester / the next school term", ["らいがっき", "来学期"]),
             new("to receive / to take (exam/lesson/test) / to accept", ["うけます", "受けます"]),
 
-            new("Professor Tanaka is on campus once a week. (casual count)", ["田中先生は週に一回キャンパスにいます。"]),
+            new("Professor Tanaka is on campus once a week. (casual count)", ["田中先生は週に一回キャンパスにいます。", "週に一回田中先生はキャンパスにいます。", "田中先生はキャンパスに週に一回います。"]),
             new("How many history students are there?", ["歴史の学生は何人いますか。"]),
             new("There are 11 literature students.", ["ぶんがくのがくせい[が/が]十一人います。", "文学の学生が十一人います。", "文学の学生は十一人います。"]),
             new("Are you finished with the history assignment?", ["れきしのかだいはおわりましたか。", "歴史の課題は終わりましたか。"]),
@@ -539,7 +539,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("The singer's song was terrible.", ["かしゅのうたはひどかったです。", "歌手の歌は酷かったです。"]),
             new("Because the limousine was expensive, we took a bus.", ["リムジンは高かったので、バスに乗りました。"]),
             new("After the meal, there was a boring speech.", ["ご飯の後、詰まらないスピーチがありました。"]),
-            new("The day before yesterday I did nothing all day.", ["おとといいちにちじゅう何もしませんでした。", "一昨日一日中何もしませんでした。"]),
+            new("The day before yesterday I did nothing all day.", ["おとといいちにちじゅう何もしませんでした。", "一昨日一日中何もしませんでした。", "一昨日は一日中何もしませんでした。"]),
             new("I went to the wedding by limo with some other people.", ["ほかの人とリムジンでけっこんしきに行きました。", "他の人とリムジンで結婚式に行きました。"]),
             ]
         ),
@@ -573,9 +573,9 @@ new("Section 4, unit 22 - Describe extended family", [
             new("lemon", ["レモン"]),
             new("shaved ice, a sweet ice dessert often flavored with syrup", ["かきごおり", "かき氷"]),
 
-            new("Would you like to swim somewhere this wednesday?",["今週の水曜日にどこかに泳ぎませんか。"]),
+            new("Would you like to swim somewhere this Wednesday?",["今週の水曜日にどこかで泳ぎませんか。", "今週の水曜日はどこかで泳ぎませんか。", "今週の水曜日どこかで泳ぎませんか。"]),
             new("Let's go next week", ["来週行きましょう。"]),
-            new("Do you have plans on the eighth?", ["ようかによていはありますか。", "八日に予定はありますか。"]),
+            new("Do you have plans on the eighth?", ["ようかによていはありますか。", "八日に予定はありますか。", "八日は予定はありますか。"]),
             new("Would you like to go somewhere?", ["どこかに行きませんか。"]),
             new("Let's go to a pool in Shibuya!", ["渋谷のプールに行きましょう。"]),
             new("Because it’s cheap, let’s go to the nearby beach.", ["安いので、近くの海に行きましょう。"]),
@@ -596,7 +596,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I changed already.", ["おうきがえました。","もう着替えました。"]),
             new("We should quickly change / Let's change quickly.", ["はやくきがえましょう。", "速く着替えましょう。"]),
             new("I dropped my phone somewhere.", ["どこかでけいたいをおとしました。", "どこかで携帯を落としました。"]),
-            new("It's fairly / reasonably / quite / pretty much close.", ["けっこう近いです。", "結構近いです。"]),
+            new("It's fairly / reasonably / quite / pretty much close.", ["けっこう近いです。", "まあまあ近いです。", "結構近いです。", "かなり近いです。", "だいぶ近いです。", "すぐ近いです。"]),
             new("I want to do surfing.", ["サーフィンがしたいです。"]),
             ]
         ),
@@ -760,6 +760,9 @@ new("Section 4, unit 22 - Describe extended family", [
             new("(My) major was chinese literature.", ["専攻は中国文学でした。"]),
             new("I don't want to wake up early.", ["早くおきたくないです。", "早く起きたくないです。"]),
             new("How many tables are there in the room? (As for in the room, tables — how many exist?)", ["部屋にテーブルがいくつありますか。", "部屋にテーブルはいくつありますか。"]),
+            new("Would you like to eat somewhere?", ["どこかで食べませんか。"]),
+            new("Would you like to eat at a restaurant somewhere?", ["どこかのレストランで食べませんか。", "どこかのレストランに食べに行きませんか。", "どこかのレストランに行って食べませんか。"]),
+            new("Where are (we) going?", ["どこに行きますか。", "どこへ行きますか。", "どこ行くの。"]),
         ]),
     ];
 
