@@ -19,19 +19,68 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
+        new("Section 4, unit 28 - Get directions", [
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            new("sour", ["すっぱい", "酸っぱい"]),
+            new("'favorite food'/'favorite thing to eat'", ["こうぶつ", "好物"]),
+            new("glass drinking glass / more stylish beverage glass", ["グラス"]),
+            new("rice bowl", ["ちゃわん", "茶碗"]),
+            new("bowl", ["ボウル"]),
+            new("counter for long, cylindrical, stick-like objects (bottle, pen, umbrella, tree, banana, chopsticks)", ["本"]),
+            new("glass (generic everyday cup / tumbler)", ["コップ"]),
+
+            
+            new("One fork please.", ["フォークを一本ください"]),
+            new("Four spoons please", ["スプーンを四つください。"]),
+            new("I am really sorry.", ["本当にすみません。"]),
+            new("Half please./Please give me half./I’ll take half.", ["半分ください。"]),
+            new("My favorite food is sushi.", ["好物は寿司です。"]),
+            new("These grapes are sour.", ["この葡萄は酸っぱいです。"]),
+            new("Red wine please.", ["赤ワインをください"]),
+            new("(We) make wine from grapes.", ["葡萄からワインを作ります"]),
+            new("This soup is not very salty.", ["このスープはあまり塩っぱくないです。"]),
+            new("(I) am really hungry.", ["本当にお腹が空きました"]),
+            new("Let's wash the dishes.", ["お皿を洗いましょう。"]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            ]),
+
+        new("Section 4, unit 28 - Get directions", [
+            new("right beside / close to something (beside/adjacent/closely related) (“right around here/next to this thing”) (closer, narrower, more “next to” and less flexible than 近く)", ["そば"]),
+            new("street (name)/“way things pass/flow”(often urban streets/named streets/emphasizes people/traffic passing through)", ["とおり", "通り"]),
+            new("to pass through / to go through / to pass by", ["とおります", "通ります"]),
+            new("Southwest", ["なんせい", "南西"]),
+            new("Southeast", ["なんとう", "南東"]),
+            new("Northwest", ["ほくせい", "北西"]),
+            new("Northeast", ["ほくとう", "北東"]),
+            new("North America", ["北アメリカ"]),
+            new("South America", ["南アメリカ"]),
+            new("over there / on the other side / beyond / the opposite side / the other party", ["むこう", "向こう"]),
+            new("over there / that way / that person / that side (depends on ctx)　(polite あそこ)", ["あちら"]),
+            new("there / that way / that side / you / your place (depends on ctx) (polite そこ)", ["そちら"]),
+            new("which way / which direction / which one (polite)", ["どちら"]),
+
+
+            new("Which way is the exit?/Where is the exit?/Which direction is the exit?", ["出口はどちらですか。"]),
+            new("How do you get home?/How are you going home?/How do you return home?", ["どうやって家に帰りますか。", "家にどうやって帰りますか。", "どうやって家まで帰りますか。", "家までどうやって帰りますか。"]),
+            new("Where is the hospital's entrance?", ["病院の入り口はどこですか。"]),
+            new("I will go there./I’ll go that way./I’ll come to your place (polite form) (depends on ctx).", ["そちらに行きます。", "そちらへ行きます。"]),
+            new("The road is over there (on the other side)", ["道は向こうです。"]),
+            new("There is a station on the other side of the street/road. (On the road’s other side, there is a station.)", ["道の向こうに駅があります"]),
+            new("First, you pass by a big hospital. (First, (you/I) pass through the vicinity of a big hospital (move along a route near it).)", ["まず、大きな病院のそばを通ります。", "まず、大きい病院のそばを通ります。", "初めに、大きな病院のそばを通ります。", "初めに、大きい病院のそばを通ります。"]),
+            new("First, you pass by a small bank. (First, (you/I) pass through the vicinity of a small bank (move along a route near it).)", ["まず、小さな銀行のそばを通ります。", "まず、小さい銀行のそばを通ります。", "初めに、小さな銀行のそばを通ります。", "初めに、小さい銀行のそばを通ります。"]),
+            new("(It's) a small hospital.", ["小さな病院です。", "小さい病院です。"]),
+            new("Please open the store now. (As for the shop, please open it now.)", ["店を今開けてください", "今店を開けてください"]),
+            //This path goes west. この道は西に行きます
+        ]),
+
         new("Section 4, unit 27 - Talk about food and drink", [
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
             new("completely/entirely/at all/really (more emphatic/strong than 全然)", ["まったく"]),
             new("few/not many/not much/little/small amount (when the quantity or number of something is low)", ["すくない", "少ない"]),
             new("mint", ["ミント"]),
@@ -40,11 +89,11 @@ internal static class GlossaryRepo
             new("physical condition / health status", ["たいちょう", "体調"]),
             new("(your) opinion (polite/formal)", ["ごいけん", "ご意見"]),
             new("how / how about / how do you find it (evaluative/polite 'how about')", ["いかが", "如何"]),
-            
+
 
             new("How is it? (evaluative/polite 'how about')", ["いかがですか。"]),
             new("What is your opinion? (polite/formal) (evaluative/polite 'how about')", ["ご意見はいかがですか。"]),
-            new("How is your health? (polite/formal) (evaluative/polite 'how about')", ["体調はいかがですか。"]),
+            new("How is your health? (evaluative/polite 'how about')", ["体調はいかがですか。"]),
             new("How are you feeling?/How is your mood? (evaluative/polite 'how about')", ["ご気分はいかがですか。"]),
             new("Doesn't it taste good?", ["美味しくないですか。"]),
             new("There's a lot of rice. (being served a meal. Most natural.)", ["ご飯が多いです。"]),
@@ -56,11 +105,12 @@ internal static class GlossaryRepo
             new("There's no food at all. (more emphatic/strong than 全然)", ["まったく食べ物がありません。", "まったく食べ物はありません。", "食べ物がまったくありません。", "食べ物はまったくありません。", "食べ物が全然ないです", "食べ物は全然ないです", "全然食べ物がないです", "全然食べ物はないです"]),
             new("It's very tasty. (formal/hospitality/service languages/written reviews)", ["たいへん美味しいです。", "大変美味しいです。"]),
             new("I drink black tea, and (then) I also drink coffee. (Drink black tea, and coffee also drink.)", ["紅茶を飲んで、コーヒーも飲みます。"]),
-            new("I drink both tea and coffee.", ["紅茶もコーヒーも飲みます。"]),
+            new("I drink both black tea and coffee.", ["紅茶もコーヒーも飲みます。"]),
             new("Let's eat the lunchbox, and (then) go outside.", ["お弁当を食べて、外に行きましょう。", "弁当を食べて、外に行きましょう。"]),
             new("What would you like to drink? (honorific) (Your drink, what will you make it to/choose it as?)", ["お飲み物は何にしますか。"]),
             new("Would you like a boxed lunch? (honorific, evaluative/polite 'how about')", ["お弁当はいかがですか。", "弁当はいかがですか。"]),
             new("All (of them) please.", ["全部ください。", "全部をください。"]),
+            new("All (of them) are tasty.", ["全部美味しいです。"]),
             ]),
 
         new("Section 4, unit 26 - Discuss weather", [
@@ -793,6 +843,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Would you like to eat somewhere?", ["どこかで食べませんか。"]),
             new("Would you like to eat at a restaurant somewhere?", ["どこかのレストランで食べませんか。", "どこかのレストランに食べに行きませんか。", "どこかのレストランに行って食べませんか。"]),
             new("Where are (we) going?", ["どこに行きますか。", "どこへ行きますか。", "どこ行くの。"]),
+            new("(We) slept on the traditional flooring.", ["畳で寝ました。"]),
         ]),
     ];
 
