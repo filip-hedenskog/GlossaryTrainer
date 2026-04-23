@@ -15,6 +15,9 @@
         <KeyBinding Key="F3" Command="{Binding RevealShortcutCommand}" />
         <KeyBinding Key="F4" Command="{Binding ToggleTooltipCommand}" />
         <KeyBinding Key="Esc" Command="{Binding CloseTooltipCommand}" />
+        <KeyBinding Key="C"
+                Modifiers="Control"
+                Command="{Binding CopyFeedbackCommand}" />
     </Window.InputBindings>
 
     <Grid Margin="20">

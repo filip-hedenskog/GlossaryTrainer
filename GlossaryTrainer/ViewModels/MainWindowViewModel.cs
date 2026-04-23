@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Text.Json;
+using System.Windows;
 using System.Windows.Media;
 
 namespace GlossaryTrainer.ViewModels;
@@ -38,6 +39,7 @@ public class MainWindowViewModel : BindableBase
         RevealShortcutCommand = new DelegateCommand(OnRevealShortcut);
         ToggleTooltipCommand = new DelegateCommand(OnToggleTooltip);
         CloseTooltipCommand = new DelegateCommand(() => ShowTooltip = false);
+        CopyFeedbackCommand = new DelegateCommand(CopyFeedback);
     }
 
     public bool CanRunPassOrFailedCommand { get; set; }
@@ -198,12 +200,20 @@ public class MainWindowViewModel : BindableBase
     // Commands
     // --------------------
 
+    public DelegateCommand CopyFeedbackCommand { get; }
     public DelegateCommand SubmitCommand { get; }
     public DelegateCommand RestartCommand { get; }
 
     // --------------------
     // Logic
     // --------------------
+    private void CopyFeedback()
+    {
+        if (!string.IsNullOrEmpty(FeedbackText))
+        {
+            Clipboard.SetText(FeedbackText);
+        }
+    }
 
     private void Submit()
     {
