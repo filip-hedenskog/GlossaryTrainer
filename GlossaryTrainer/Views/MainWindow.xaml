@@ -111,14 +111,18 @@
                 FontSize="16"
                 Command="{Binding SubmitCommand}"/>
 
-            <TextBlock Text="{Binding FeedbackText}"
+            <ScrollViewer Height="500"
+              VerticalScrollBarVisibility="Auto"
+              HorizontalScrollBarVisibility="Disabled"
+              Margin="0,5,0,10">
+                <TextBlock Text="{Binding FeedbackText}"
                        Foreground="{Binding FeedbackColor}"
                        FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
                        FontSize="30"
                        TextWrapping="Wrap"
                        HorizontalAlignment="Left"
                        Margin="0,5,0,10"/>
-
+            </ScrollViewer>
 
         </StackPanel>
 
