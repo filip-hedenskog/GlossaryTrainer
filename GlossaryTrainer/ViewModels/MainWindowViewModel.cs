@@ -233,7 +233,7 @@ public class MainWindowViewModel : BindableBase
         else
         {
             FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}" + Environment.NewLine +
-            $"Your answer:" + Environment.NewLine + UserInput;
+            CurrentWord + Environment.NewLine + UserInput;
             FeedbackColor = negativeFeedbackColor;
             FailedItems.Add(current);
             CurrentTooltip = current.Tooltip;
