@@ -781,7 +781,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("fried food", ["あげもの", "揚げ物"]),
 
             new("I do strength training almost every day.", ["ほとんど毎日きんトレをします。", "ほとんど毎日筋トレをします。"]),
-            new("I don't smoke at all.", ["たばこはぜんぜんすいません。", "煙草は全然吸いません。"]),
+            new("I don't smoke at all.", ["煙草は全然吸いません。", "煙草を全然吸いません。", "全然煙草を吸いません。", "全然煙草は吸いません。"]),
             new("I don't want to smoke anymore.", ["もう煙草を吸いたくないです。", "もう吸いたくないです。", "煙草をもう吸いたくないです。"]),
             new("I take medicine three times a day.", ["いちにちにさんかいくすりをのみます。", "一日に三回薬を飲みます。"]),
             new("I watch a movie once a week.", ["いっしゅうかんにいちどえいがをみます。", "一週間に一度映画を見ます。", "週に一度映画を見ます。", "週に一回映画を見ます。"]),
@@ -869,8 +869,8 @@ new("Section 4, unit 22 - Describe extended family", [
 
         new("Section 3, unit 27 - Use past tense adjectives",[
             new("shelf", ["たな", "棚"]),
-            new("husband", ["だんなさん", "旦那さん"]),
-            new("wife", ["おくさん", "奥さん"]),
+            new("husband (someone else's, medium polite, casual)", ["旦那さん"]),
+            new("wife (someone else's, medium polite, casual)", ["奥さん"]),
             new("entrance / entryway / front door area of a house", ["げんかん", "玄関"]),
             new("to wear (lower body / feet)", ["はきます", "履きます"]),
             new("to wear (upper body / whole body)", ["きます", "着ます"]),
