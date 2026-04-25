@@ -49,7 +49,7 @@ internal static class GlossaryRepo
             new("There is money in the wallet. (existence+contrast) (As for in the wallet, money exists.)", ["財布にはお金があります。", "財布の中にはお金があります。", "財布にお金があります。", "財布の中にお金があります。"]),
             new("That (over there) is hers./That thing (over there) is hers.", ["あれは彼女のものです。", "あれは彼女のです。"]),
             new("Thanks for everything. (casual)", ["色々ありがとう。"]),
-            new("I buy various items for trip preparation.", ["旅行の準備で色々なものを買います"]),
+            new("I buy various items for trip preparation.", ["旅行の準備で色々なものを買います", "旅行の準備のために色々なものを買います", "旅行の準備のために色々なものを買います", "旅行の準備として色々なものを買います"]),
             new("Who else is coming? (Besides (this), who comes?)", ["他に誰が来ますか。", "他に誰が来るの。", "他に誰が来るんですか。", "以外に誰が来ますか。", "以外に誰が来るの。", "以外に誰が来るんですか。"]),
             new("What else is there? (Besides (this), what exists?)", ["他に何がありますか。", "以外に何がありますか。"]),
             new("Is there anything else? (Besides (this), is there something that exists?)", ["他に何かありますか。"]),
@@ -299,7 +299,7 @@ new("Section 4, unit 22 - Describe extended family", [
         new("grandmother / elderly woman (someone else's)", ["おばあさん"]),
         new("child (polite, another one's child(ren))", ["おこさん", "お子さん"]),
         new("To me/in my case (start of sentence)", ["私に"]),
-        new("granchild", ["まご", "孫"]),
+        new("grandchild", ["まご", "孫"]),
         new("grandson", ["まごむすこ", "孫息子"]),
         new("granddaughter", ["まごむすめ", "孫娘"]),
         new("husband (someone else's, very polite)", ["ごしゅじん", "ご主人"]),
@@ -406,7 +406,7 @@ new("Section 4, unit 22 - Describe extended family", [
     new("Section 4, unit 18 - Talk about your schedule", [
             new("the day after tomorrow", ["あさって", "明後日"]),
 
-            new("I work on Saturdays. (in general, usually part of job)", ["土曜日[に/は]はたらきます。", "土曜日に働きます。", "土曜日は働きます。"]),
+            new("I work on Saturdays. (in general, usually part of job)", ["土曜日に働きます。", "土曜日は働きます。"]),
             new("I come here often. (emphasize 'as for here, I come often')", ["ここにはよく来ます。", "よくここには来ます。"]),
             new("How's today? (imply asking about someone’s day or situation)", ["今日はどうですか。"]),
             new("They will talk.", ["彼らは話します。"]),
