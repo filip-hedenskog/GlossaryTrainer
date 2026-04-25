@@ -209,9 +209,9 @@ public class MainWindowViewModel : BindableBase
     // --------------------
     private void CopyFeedback()
     {
-        if (!string.IsNullOrEmpty(FeedbackText))
+        if (!string.IsNullOrEmpty(_clipboardText))
         {
-            Clipboard.SetText(FeedbackText);
+            Clipboard.SetText(_clipboardText);
         }
     }
 
@@ -222,27 +222,36 @@ public class MainWindowViewModel : BindableBase
         bool isCorrect = current.ValidTranslations
                            .Any(v => string.Equals(UserInput?.Trim().TrimEnd('。'), v.TrimEnd('。'), StringComparison.OrdinalIgnoreCase));
 
+        var allTranslations = string.Join(Environment.NewLine, current.ValidTranslations);
         if (isCorrect)
         {
             _correctAnswers++;
-            FeedbackText = $"Correct! All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}";
+            FeedbackText = $"Correct! All answers: {Environment.NewLine}{allTranslations}";
             FeedbackColor = positiveFeedbackColor;
             CurrentTooltip = current.Tooltip;
             PlayCorrectSound();
         }
         else
         {
-            FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations)}" + Environment.NewLine +
-            CurrentWord + Environment.NewLine + UserInput;
+            FeedbackText = $"Wrong! Correct answer: {Environment.NewLine}{allTranslations}" + Environment.NewLine +
+            $"Your answer:" + Environment.NewLine + UserInput;
             FeedbackColor = negativeFeedbackColor;
             FailedItems.Add(current);
             CurrentTooltip = current.Tooltip;
             PlayFailedSound();
         }
 
+        _clipboardText = $"""
+            {CurrentWord}
+            {UserInput}
+
+            All translations:
+            {allTranslations}
+            """;
         _currentIndex++;
         LoadCurrent();
     }
+    private string _clipboardText = "";
     private static readonly SolidColorBrush positiveFeedbackColor = new((Color)ColorConverter.ConvertFromString("#52ff8b"));
     private static readonly SolidColorBrush negativeFeedbackColor = new((Color)ColorConverter.ConvertFromString("#ff5996"));
     private bool CanSubmit()
