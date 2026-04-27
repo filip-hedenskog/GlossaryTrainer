@@ -40,7 +40,7 @@ internal static class GlossaryRepo
             new("person (polite form of 人)", ["かた", "方"]),
             new("who (polite version of 誰) (hiragana preferred)", ["どなた", "何方"]),
 
-            
+
             new("(I) am a woman.", ["女です。"]),
             new("How many people is it/are there? (asking for number/count, not existence)", ["何人ですか"]),
             new("(I) have seven younger sisters.", ["妹が七人います"]),
@@ -61,13 +61,20 @@ internal static class GlossaryRepo
             new("When were you born?", ["いつ生まれましたか", "お生まれはいつですか", "生まれはいつですか"]),
             new("She got divorced last year.", ["彼女は去年離婚しました", "去年彼女は離婚しました", "彼女は夫と去年離婚しました", "彼女は去年夫と離婚しました", "去年彼女は夫と離婚しました"]),
             new("Many people passed away (died) in 1600.", ["1600年に大勢の人が亡くなりました", "1600年に多くの人が亡くなりました", "1600年にたくさんの人が亡くなりました"]),
+            new("There are a lot of men. (conversational, people-centered)", ["男の人がたくさんいます", "大勢の男の人がいます", "男の人が多いです", "多くの男の人がいます", "男の人が大勢います", "たくさんの男の人がいます"]),
             new("(I) am single.", ["独身です"]),
             new("'a single man' (formal)", ["独身の男性"]),
             new("I don't have a girlfriend.", ["彼女はいません", "彼女がいません"]),
             new("(I) went on a date with my boyfriend.", ["彼氏とデートしました", "彼氏とデートに行きました"]),
             new("I am still young. (male casual/polite speech)", ["僕はまだ若いです"]),
             new("Please call the teacher.", ["先生を呼んでください"]),
-            new("My university friends are all still single.", ["大学の友達はまだ皆独身です", "大学の友達はまだ全員独身です", "まだ大学の友達は皆独身です", "まだ大学の友達は全員独身です"])
+            new("My university friends are all still single.", ["大学の友達はまだ皆独身です", "大学の友達はまだ全員独身です", "まだ大学の友達は皆独身です", "まだ大学の友達は全員独身です"]),
+            new("Tokyo has a lot of people./There are many people in Tokyo.", ["東京は人が多いです", "東京には人がたくさんいます", "東京に人がたくさんいます", "東京は人がたくさんいます"]),
+            new("These girls are famous.", ["この女の子たちは有名です"]),
+            new("How many people are in your family?", ["家族は何人いますか", "家族は何人ですか"]),
+            new("There are four people in my family", ["家族は四人います"]),
+            new("We are a family of three. (My family is three people)", ["家族は三人です"]),
+            new("We are three people (in my family): my parents and me. (female/netural gender)", ["両親と私の三人です", "両親と私の三人家族です", "私と両親の三人です", "私と両親の三人家族です", "三人家族です"]),
         ]),
 
         new("Section 4, unit 31 - Shop for common items", [
