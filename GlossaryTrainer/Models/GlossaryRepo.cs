@@ -69,11 +69,11 @@ internal static class GlossaryRepo
             new("I am still young. (male casual/polite speech)", ["僕はまだ若いです"]),
             new("Please call the teacher.", ["先生を呼んでください"]),
             new("My university friends are all still single.", ["大学の友達はまだ皆独身です", "大学の友達はまだ全員独身です", "まだ大学の友達は皆独身です", "まだ大学の友達は全員独身です"]),
-            new("Tokyo has a lot of people./There are many people in Tokyo.", ["東京は人が多いです", "東京には人がたくさんいます", "東京に人がたくさんいます", "東京は人がたくさんいます"]),
+            new("Tokyo has a lot of people./There are many people in Tokyo.", ["東京は人が多いです", "東京には人がたくさんいます", "東京に人がたくさんいます", "東京は人がたくさんいます", "東京には多くの人がいます", "東京に多くの人がいます"]),
             new("These girls are famous.", ["この女の子たちは有名です"]),
             new("How many people are in your family?", ["家族は何人いますか", "家族は何人ですか"]),
             new("There are four people in my family", ["家族は四人います"]),
-            new("We are a family of three. (My family is three people)", ["家族は三人です"]),
+            new("(We) are a family of three. (My family is three people)", ["家族は三人です", "三人家族です", "家族は三人います", "うちは三人家族です"]),
             new("We are three people (in my family): my parents and me. (female/netural gender)", ["両親と私の三人です", "両親と私の三人家族です", "私と両親の三人です", "私と両親の三人家族です", "三人家族です"]),
         ]),
 
