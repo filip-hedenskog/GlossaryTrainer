@@ -80,6 +80,14 @@ internal static class GlossaryRepo
             new("When I opened the large window, cool air came in (toward me).", ["大きな窓を開けたら、涼しい風が入ってきました", "大きい窓を開けたら、涼しい風が入ってきました"]),
             new("It is a cold day today.", ["今日は寒い日です"]),
             new("Today is warm, and tomorrow is cool.", ["今日は暖かく、明日は涼しいです", "今日は暖かいけど、明日は涼しいです", "今日は暖かいですが、明日は涼しいです"]),
+            new("It is cold at night.", ["夜は寒いです"]),
+            new("It gets cold at night.", ["夜は寒くなります"]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
             ]),
 
         new("Section 5, unit 32 - Discuss relationships", [
@@ -237,11 +245,11 @@ internal static class GlossaryRepo
             new("glass (generic everyday cup / tumbler)", ["コップ"]),
 
             
-            new("One fork please.", ["フォークを一本ください"]),
-            new("Two chopsticks please.", ["お箸を二本ください"]),
-            new("I am really sorry.", ["本当にすみません。"]),
-            new("Half please./Please give me half./I’ll take half.", ["半分ください。"]),
-            new("My favorite food is sushi.", ["好物は寿司です。"]),
+            new("One fork please. (counter for long, cylindrical, stick-like objects)", ["フォークを一本ください"]),
+            new("Two chopsticks please. (honorific, counter for long, cylindrical, stick-like objects)", ["お箸を二本ください"]),
+            new("(I) am really sorry.", ["本当にすみません。"]),
+            new("Half please./Please give me half./I’ll take half.", ["半分ください"]),
+            new("(My) favorite food is sushi.", ["好物は寿司です。"]),
             new("These grapes are sour.", ["この葡萄は酸っぱいです。"]),
             new("Red wine please.", ["赤ワインをください", "赤ワインください"]),
             new("White wine please.", ["白ワインをください", "白ワインください"]),
@@ -249,7 +257,7 @@ internal static class GlossaryRepo
             new("This soup is not very salty.", ["このスープはあまり塩っぱくないです。"]),
             new("(I) am really hungry.", ["本当にお腹が空きました"]),
             new("Let's wash the dishes.", ["お皿を洗いましょう。"]),
-            new("(I) eat sushi with chopsticks.", ["お箸で寿司を食べます。", "箸で寿司を食べます。"]),
+            new("(I) eat sushi with chopsticks. (honorific)", ["お箸で寿司を食べます。", "箸で寿司を食べます。"]),
             ]),
 
         new("Section 4, unit 28 - Get directions", [
@@ -346,7 +354,7 @@ internal static class GlossaryRepo
             new("How strong is the wind? (As for the wind, how strong is it?)", ["風はどれくらい強いですか。", "風はどれぐらい強いですか。", "風がどれくらい強いですか。", "風がどれぐらい強いですか。"]),
             new("What's tomorrows weather?", ["明日の天気はどうですか。", "明日はどんな天気ですか。", "明日の天気は何ですか。"]),
             new("It's neither good nor bad.", ["よくも悪くもないです。"]),
-            new("Yesterday was cloudy. (As for yesterday, it was in a cloudy state.)", ["昨日は曇っていました。", "昨日は曇っていました。"]),
+            new("Yesterday was cloudy. (As for yesterday, it was in a cloudy state.)", ["昨日は曇っていました"]),
         ]),
 
         new("Section 4, unit 25 - Describe your hobbies", [
