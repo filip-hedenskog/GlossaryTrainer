@@ -80,12 +80,13 @@ internal static class GlossaryRepo
             new("Today is warm, and tomorrow is cool.", ["今日は暖かく、明日は涼しいです", "今日は暖かいけど、明日は涼しいです", "今日は暖かいですが、明日は涼しいです"]),
             new("It is cold at night.", ["夜は寒いです"]),
             new("It gets cold at night.", ["夜は寒くなります"]),
+            new("It starts getting cold at night./It’s (now) beginning to get cold at night.", ["夜は寒くなってきます"]),
             new("It has started raining.", ["雨が降ってきました"]),
 
-            new("has become / is now (present state)", ["なっています"]),
-            new("had become / was (past state)", ["なっていました"]),
-            new("will start becoming / will come to be (future change)", ["なってきます"]),
-            new("has been becoming / has come to be (past → present change)", ["なってきました"]),
+            new("is now / has become (and remains so) (present state)", ["なっています"]),
+            new("had become / was (already) (past state) (no guarantee that state holds in present)", ["なっていました"]),
+            new("will start to become / will gradually become (future change)", ["なってきます"]),
+            new("has gradually become / has come to be (past → present change) (usually does still hold in the present)", ["なってきました"]),
 
             new("(I/They) have become good/are (now) good.", ["上手になっています"]),
             new("(By) last year (they) had become good.", ["去年は上手になっていました", "去年上手になっていました"]),
@@ -93,8 +94,8 @@ internal static class GlossaryRepo
             new("From now on (I’ll) start getting better.", ["これから上手になってきます"]),
             new("From now on (I’ll) get even better.", ["これからもっと上手になってきます"]),
             new("(I’ve) been getting better", ["上手になってきました"]),
-
             new("I have gradually (little by little / bit by bit) been getting better.", ["少しずつ上手になってきました"]),
+
             new("It has started to get warm.", ["暖かくなってきました"]),
             new("Please hold up an umbrella.", ["傘を差してください"]),
             new("Can (I) hold up (my) umbrella?", ["傘を差してもいいですか"]),
