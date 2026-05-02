@@ -40,9 +40,8 @@ internal static class GlossaryRepo
             new("direction / way", ["ほう", "方"]),
             new("corner / edge / sharp point (A physical edge or point where surfaces meet) (sharp geometry corner, something you can physically bump into)", ["かど", "角"]),
             new("skilled / good at something / proficient", ["じょうず", "上手"]),
-            new("is becoming (gradually, up to now) (Focus on change over time)", ["なってきます"]),
-            new("has become / is in the state of having become (Focus on the current state)", ["なっています"]),
-            new("each / at a time / little by little / gradually (incremental repetition or distribution)", ["ずつ"]),
+
+            new("each / at a time / gradually (incremental repetition or distribution)", ["ずつ"]),
             new("smooth/favorable/going well (idea: things are arranged properly or going in the right direction)", ["じゅんちょう", "順調"]),
             new("meeting/conference ('a gathering for discussion')", ["かいぎ", "会議"]),
             new("to move forward/advance / to make progress / time progresses / (sometimes) to proceed to the next stage", ["すすみます", "進みます"]),
@@ -52,7 +51,7 @@ internal static class GlossaryRepo
             new("but/though/however (formal/written/speeches, after period/semicolon/paragraph/break/comma)", ["しかし"]),
             new("to hold up/open (an umbrella) / sunlight shines/light enters / to pour (tea/alcohol into a cup, unusual)", ["さします", "差します"]),
             
-            new("I will put up/open an umbrella.", ["傘を差します"]),
+            new("(I) will put up/open an umbrella.", ["傘を差します"]),
             new("Light is (in the state of) coming in through the window.", ["窓から光が差しています"]),
             new("The [meeting/conference] is progressing smoothly./The [meeting/conference] is going well.", ["会議が順調に進みます"]),
             new("The train is moving forward.", ["電車が進んでいます", "電車は進んでいます", "電車が進みます", "電車は進みます"]),
@@ -65,8 +64,7 @@ internal static class GlossaryRepo
             new("(I) eat (them) one by one.", ["一つずつ食べます"]),
             new("Please speak for 10 minutes each.", ["一人十分ずつ話してください"]),
             new("'little by little'", ["少しずつ"]),
-            new("I'm preparing little by little.", ["少しずつ準備しています", "少しずつ準備をしています"]),
-            new("I’m gradually getting better.", ["少しずつ上手になってきます"]),
+            new("I'm (in the state of) preparing little by little.", ["少しずつ準備しています", "少しずつ準備をしています"]),
             new("I'm starting to understand Japanese little by little.", ["少しずつ日本語が分かってきました"]),
             new("Let's go (proceed/move forward) straight in that direction. (polite, guiding) ('follow that direction (over there) straight ahead')", ["そちらをまっすぐ進みましょう", "あちらをまっすぐ進みましょう"]),
             new("Next, go (proceed/move forward) straight along the narrow path.", ["次に、狭い道をまっすぐ進みます"]),
@@ -82,6 +80,22 @@ internal static class GlossaryRepo
             new("Today is warm, and tomorrow is cool.", ["今日は暖かく、明日は涼しいです", "今日は暖かいけど、明日は涼しいです", "今日は暖かいですが、明日は涼しいです"]),
             new("It is cold at night.", ["夜は寒いです"]),
             new("It gets cold at night.", ["夜は寒くなります"]),
+            new("It has started raining.", ["雨が降ってきました"]),
+
+            new("has become / is now (present state)", ["なっています"]),
+            new("had become / was (past state)", ["なっていました"]),
+            new("will start becoming / will come to be (future change)", ["なってきます"]),
+            new("has been becoming / has come to be (past → present change)", ["なってきました"]),
+
+            new("(I/They) have become good/are (now) good.", ["上手になっています"]),
+            new("(By) last year (they) had become good.", ["去年は上手になっていました", "去年上手になっていました"]),
+
+            new("From now on (I’ll) start getting better.", ["これから上手になってきます"]),
+            new("From now on (I’ll) get even better.", ["これからもっと上手になってきます"]),
+            new("(I’ve) been getting better", ["上手になってきました"]),
+
+            new("I have gradually (little by little / bit by bit) been getting better.", ["少しずつ上手になってきました"]),
+            new("It has started to get warm.", ["暖かくなってきました"]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
