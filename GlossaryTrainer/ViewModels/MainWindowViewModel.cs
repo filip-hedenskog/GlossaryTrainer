@@ -127,6 +127,13 @@ public class MainWindowViewModel : BindableBase
     // --------------------
     // Bindable properties
     // --------------------
+    private bool _useJapaneseFont;
+    public bool UseJapaneseFont
+    {
+        get => _useJapaneseFont;
+        set => SetProperty(ref _useJapaneseFont, value);
+    }
+
     private string _feedbackText;
     public string FeedbackText
     {
@@ -241,6 +248,7 @@ public class MainWindowViewModel : BindableBase
         }
 
         CurrentWord = _items[_currentIndex].Word;
+        UseJapaneseFont = _items[_currentIndex].UseJapaneseFont;
         NewWordLoaded?.Invoke();
     }
 

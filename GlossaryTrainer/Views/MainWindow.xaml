@@ -59,7 +59,19 @@
                 HorizontalAlignment="Left"
                 TextWrapping="Wrap"
                 MaxHeight="100"
-                Margin="0,0,0,20"/>
+                Margin="0,0,0,20">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontFamily" Value="Segoe UI"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding UseJapaneseFont}" Value="True">
+                                <Setter Property="FontFamily"
+                            Value="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
 
             <TextBox
                 x:Name="UserInputTextBox"
