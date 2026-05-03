@@ -13,8 +13,6 @@
         <KeyBinding Key="F1" Command="{Binding PassShortcutCommand}" />
         <KeyBinding Key="F2" Command="{Binding FailShortcutCommand}" />
         <KeyBinding Key="F3" Command="{Binding RevealShortcutCommand}" />
-        <KeyBinding Key="F4" Command="{Binding ToggleTooltipCommand}" />
-        <KeyBinding Key="Esc" Command="{Binding CloseTooltipCommand}" />
         <KeyBinding Key="C"
                 Modifiers="Control"
                 Command="{Binding CopyFeedbackCommand}" />
@@ -51,25 +49,6 @@
                     Command="{Binding LoadCommand}"
                     Margin="5"/>
         </StackPanel>
-
-        <!-- Top feedback banner -->
-        <Border Background="#CC000000"
-                Panel.ZIndex="1"
-                CornerRadius="8"
-                Padding="12"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,20,0,0"
-                Visibility="{Binding ShowTooltip, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <TextBlock Text="{Binding CurrentTooltip}"
-                   FontSize="30"
-                   Foreground="White"
-                   TextWrapping="Wrap"
-                   TextAlignment="Left"/>
-            </ScrollViewer>
-        </Border>
-
 
         <!-- Quiz -->
         <StackPanel Orientation="Vertical" Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
