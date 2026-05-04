@@ -33,8 +33,8 @@ internal static class GlossaryRepo
             new("to climb (something physically), to go up / move upward (general), to rise / ascend (formal, abstract, or natural phenomena)", ["のぼります", "登ります"]),
             new("(flowers) bloom / will bloom", ["さきます", "咲きます"]),
 
-
-            new("In spring many flowers bloom in the garden. (contrast/emphasis on spring)", ["春にはたくさんの花が庭に咲きます", ""]),
+                    
+            new("In spring many flowers bloom in the garden. (contrast/emphasis on spring)", ["春にはたくさんの花が庭に咲きます"]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
