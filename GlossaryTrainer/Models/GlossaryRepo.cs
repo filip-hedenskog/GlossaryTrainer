@@ -19,6 +19,35 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
+                new("Section 5, unit 35 - Describe nature", [
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            new("to climb (something physically), to go up / move upward (general), to rise / ascend (formal, abstract, or natural phenomena)", ["のぼります", "登ります"]),
+            new("(flowers) bloom / will bloom", ["さきます", "咲きます"]),
+
+
+            new("In spring many flowers bloom in the garden. (contrast/emphasis on spring)", ["春にはたくさんの花が庭に咲きます", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            ]),
+
         new("Section 5, unit 34 - Discuss belongings", [
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -57,7 +86,6 @@ internal static class GlossaryRepo
             new("The clothes are not loose.", ["服はゆるくないです", "服はゆるくありません"]),
             new("I bought two pairs of gloves.", ["手袋を二組買いました", "手袋を二双買いました"]),
             new("I woke up early in the morning.", ["朝早く起きました", "朝は早く起きました"]),
-            new("How much is one pair of gloves?", ["手袋は一組いくらですか", "手袋は一双いくらですか"]),
             new("I turned off the TV.", ["テレビを消しました"]),
             new("Please close the door slowly.", ["ドアをゆっくり閉めてください", "ゆっくりドアを閉めてください", "ドアをそっと閉めてください", "そっとドアを閉めてください"]),
             new("Is she waiting for a bus?", ["彼女はバスを待っていますか"]),
