@@ -106,9 +106,9 @@ public class MainWindowViewModel : BindableBase
         if (SelectedGlossary == null)
             return;
 
-        _items = SelectedGlossary.Items
-            .OrderBy(_ => Guid.NewGuid())
-            .ToList();
+        _items = SelectedGlossary.Name == "All"
+            ? [.. AvailableGlossaries.SelectMany(g => g.Items).OrderBy(_ => Guid.NewGuid())]
+            : [.. SelectedGlossary.Items.OrderBy(_ => Guid.NewGuid())];
 
         _currentIndex = 0;
         _correctAnswers = 0;
@@ -118,7 +118,8 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
-    public void UpdateProgressText() {
+    public void UpdateProgressText()
+    {
         ProgressText = $"{_currentIndex}/{_items.Count}";
     }
     public string ProgressText { get => field; set => SetProperty(ref field, value); }

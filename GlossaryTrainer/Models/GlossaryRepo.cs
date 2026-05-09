@@ -19,7 +19,9 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
-                new("Section 4, unit 35 - Describe nature", [
+        new("All", []),
+
+        new("Section 4, unit 35 - Describe nature", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -274,7 +276,7 @@ internal static class GlossaryRepo
 
             new("I carry a bag.", ["鞄を持ちます", "鞄を持っています"]),
             new("I carry the luggage.", ["荷物を持ちます", "荷物を持っています"]),
-            new("I hold an umbrella.", ["傘を持ちます", "傘を持っています"]),
+            new("I carry an umbrella.", ["傘を持ちます", "傘を持っています"]),
             new("I have a car.", ["車を持っています"]),
             new("I have my passport.", ["パスポートを持っています"]),
             new("Do you have money (on/with you)?", ["お金を持っていますか"]),
@@ -291,7 +293,7 @@ internal static class GlossaryRepo
             new("I want the same wallet as him.", ["彼と同じ財布が欲しいです", "彼のと同じ財布が欲しいです", ]),
             new("There is no other wristwatch as cute as this one.", ["こんなに可愛い腕時計は他にありません", "こんな可愛い腕時計は他にありません", "こんなに可愛い腕時計はありません", "こんな可愛い腕時計はありません"]),
             new("How about a bag like this?", ["こんな鞄はいかがですか", "こんな鞄はどうですか"]),
-            new("May I carry the bag?", ["鞄を持ちましょうか"]),
+            new("May I carry the bag?", ["鞄を持ってもいいですか"]),
             ]),
 
         new("Section 4, unit 30 - Express days and times", [
@@ -455,7 +457,7 @@ internal static class GlossaryRepo
             new("I will meet my mother in the park.", ["公園で母に会います。"]),
             new("See you later.", ["またね。"]),
             new("See you next week.", ["また来週。"]),
-            new("I will call the restaurant.", ["レストランに電話を掛けます。", ""]),
+            new("I will call the restaurant. (by phone)", ["レストランに電話を掛けます。", ""]),
             new("(I) will call you (from) now. (Starting from now, I call to you (by phone).)", ["今からあなたに電話を掛けます。"]),
             new("Today I am not busy. (As for today, busy-ness does not exist.) (most polite form)", ["今日は忙しくありません。"]),
             new("Today I am not busy. (As for today, (it) is not busy.) (plain+polite form)", ["今日は忙しくないです。"]),
@@ -526,7 +528,7 @@ new("Section 4, unit 22 - Describe extended family", [
         new("How old are you? (most polite, soft, respectful way)", ["おいくつですか。"]),
         new("[To me/in my case] (personally) have a wife and three children.", ["私には妻と三人の子供がいます。", "私には妻と子供が三人います。"]),
         new("I'm home./I'm back.", ["ただいま。",  "只今"]),
-        new("Is your husband at home?", ["ご主人はございたくですか。", "ご主人はご在宅ですか。", "旦那さんはご在宅ですか。"]),
+        new("Is your husband at home? (very polite)", ["ご主人はございたくですか。", "ご主人はご在宅ですか。", "旦那さんはご在宅ですか。"]),
         new("Take care./See you./Have a good day. (always from person staying)", ["行ってらっしゃい。"]),
         new("I'm leaving (and I'll come back)./I'm off. (always from person leaving)", ["行ってきます。"]),
         new("Welcome back.", ["おかえりなさい。"]),
@@ -713,7 +715,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("to warm/heat", ["あたためます", "温めます"]),
             new("to push/press (for buttons, doors, or stamps/seals)", ["おします", "押します"]),
             new("instant cup noodles / cup ramen", ["カップラーメン"]),
-            new("to pull out/take out/withdraw (literally/figuratively, money or eliciting something)", ["ひきだします", "引き出します"]),
+            new("to pull out/take out/withdraw from inside something (literally/figuratively, money or eliciting something)", ["ひきだします", "引き出します"]),
             new("fermented soybeans", ["なっとう", "納豆"]),
             new("copy machine", ["コピーき", "コピー機"]),
 
@@ -929,7 +931,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Which do you prefer, seafood or meat? / Seafood or meat, which is better?", ["シーフードと肉、どちらがいいですか。"]),
             new("Which sounds good?", ["どちらがいいですか。"]),
             new("Omelet rice sounds good.", ["オムライスがいいです。"]),
-            new("This time it's my treat too / This time I'll pay too", ["今回も私のおごりです。", "今回も私の奢りです。"]),
+            new("This time it's my treat too / This time I'll pay too (female/neutral gender)", ["今回も私のおごりです。", "今回も私の奢りです。"]),
             new("I'll have this lettuce salad.",["このレタスサラダにします。"]),
             new("Which dressing is good?", ["どのドレッシングがいいですか。"]),
             new("I would like some french fries. Sam, what will you have?", ["フライドポテトをお願いします。サムさんは何にしますか。"]),
@@ -963,7 +965,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("We should get straws.",["ストローを貰いましょう。"]),
             new("Do we need sunglasses?", ["サングラスは要りますか。", "サングラスはいりますか。"]),
             new("I need new sunglasses.", ["新しいサングラスがいります。", "新しいサングラスが要ります。"]),
-            new("The locker room is there.", ["ロッカールームはそこです。"]),
+            new("The locker room is there.", ["ロッカールームはそこです。", "ロッカールームはあそこです。"]),
             new("Because it's dirty, I'm going to wash my face later.", ["きたないので、あとでかおをあらいます。", "汚いので、後で顔を洗います。"]),
             new("Because it's late, we should go home in a bit.", ["遅いので、そろそろ家に帰りましょう。"]),
             new("I changed already.", ["おうきがえました。","もう着替えました。"]),
