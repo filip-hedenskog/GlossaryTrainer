@@ -118,6 +118,11 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
+    public void UpdateProgressText() {
+        ProgressText = $"{_currentIndex}/{_items.Count}";
+    }
+    public string ProgressText { get => field; set => SetProperty(ref field, value); }
+
     private bool CanStartQuiz()
         => SelectedGlossary != null;
 
@@ -238,6 +243,7 @@ public class MainWindowViewModel : BindableBase
 
     private void LoadCurrent()
     {
+        UpdateProgressText();
         CanRunPassOrFailedCommand = true;
         UserInput = string.Empty;
 

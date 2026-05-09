@@ -22,6 +22,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <StackPanel Visibility="{Binding IsQuizStarted, Converter={StaticResource InverseBoolToVis}}">
@@ -121,7 +122,10 @@
         </StackPanel>
 
         <!-- Result -->
-        <StackPanel Grid.Row="1"
+        <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding ProgressText}" Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   FontSize="24"
+                   Foreground="#52ff8b"/>
+        <StackPanel Grid.Row="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Visibility="{Binding IsFinished, Converter={StaticResource BooleanToVisibilityConverter}}">
