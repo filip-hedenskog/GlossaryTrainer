@@ -19,11 +19,11 @@ internal static class GlossaryRepo
     public static List<Glossary> Load()
     =>
     [
-                new("Section 5, unit 35 - Describe nature", [
+                new("Section 4, unit 35 - Describe nature", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
-            //new("", ["", ""]),
+            new("voice / sound of a person or animal", ["こえ", "声"]),
             new("fox", ["キツネ", "狐"]),
             new("counter for small to medium-sized animals", ["ひき", "匹"]),
             new("to fly", ["とびます", "飛びます"]),
@@ -33,22 +33,22 @@ internal static class GlossaryRepo
             new("to climb (something physically), to go up / move upward (general), to rise / ascend (formal, abstract, or natural phenomena)", ["のぼります", "登ります"]),
             new("(flowers) bloom / will bloom", ["さきます", "咲きます"]),
 
-                    
+            
             new("In spring many flowers bloom in the garden. (contrast/emphasis on spring)", ["春にはたくさんの花が庭に咲きます", "春になると、庭にたくさんの花が咲きます", "春、庭にたくさんの花が咲きます", "春には庭にたくさんの花が咲きます", "庭には春になるとたくさんの花が咲きます", "春には庭にたくさんの花が咲いています", "春には多くの花が庭に咲きます", "春になると、庭に多くの花が咲きます", "春、庭に多くの花が咲きます", "春には庭に多くの花が咲きます", "庭には春になると多くの花が咲きます", "春には庭に多くの花が咲いています"]),
             new("(The/A) boy is (in the state of) swimming in the sea.", ["男の子が海で泳いでいます", "男の子は海で泳いでいます"]),
             new("(The/A) monkey was born in Tokyo.", ["猿は東京で生まれました", "猿が東京で生まれました", "東京で猿が生まれました"]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
+            new("There are a lot of fish in the pond.", ["池に魚がたくさんいます", "魚が池にたくさんいます", "池には魚がたくさんいます", "池にはたくさんの魚がいます", "池にたくさんの魚がいます", "池には魚が多いです"]),
+            new("Please climb that mountain (over there).", ["あの山に登ってください", "あの山を登ってください"]),
+            new("Yesterday (I) climbed a mountain.", ["昨日山に登りました", "昨日は山に登りました", "昨日山を登りました", "昨日は山を登りました"]),
+            new("Are there yellow flowers blooming in the garden?", ["庭に黄色い花が咲いていますか",  "庭には黄色い花が咲いていますか", "庭で黄色い花が咲いていますか"]),
+            new("(I) swim in the river in the summer.", ["夏は川で泳ぎます"]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             ]),
 
-        new("Section 5, unit 34 - Discuss belongings", [
+        new("Section 4, unit 34 - Discuss belongings", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -107,7 +107,7 @@ internal static class GlossaryRepo
             //new("", ["", ""]),
             ]),
 
-        new("Section 5, unit 33 - Discuss weather", [
+        new("Section 4, unit 33 - Discuss weather", [
             new("direction / way (direction (“that side”), comparison or preference (“A side” instead of B))", ["ほう", "方"]),
             new("corner / edge / sharp point (A physical edge or point where surfaces meet) (sharp geometry corner, something you can physically bump into)", ["かど", "角"]),
             new("skilled / good at something / proficient", ["じょうず", "上手"]),
@@ -174,7 +174,7 @@ internal static class GlossaryRepo
             new("I forgot snacks.", ["お菓子を忘れました"]),
             ]),
 
-        new("Section 5, unit 32 - Discuss relationships", [
+        new("Section 4, unit 32 - Discuss relationships", [
             new("single (unmarried)", ["どくしん", "独身"]),
             new("to be born (polite form)", ["うまれます", "生まれます"]),
             new("divorce / to get divorced", ["りこん", "離婚"]),
