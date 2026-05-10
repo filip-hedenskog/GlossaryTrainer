@@ -754,7 +754,7 @@ new("Section 4, unit 22 - Describe extended family", [
 
     new("Section 4, unit 12 - Discuss a meal", [
             new("What's (your) name? (honorific/politeness prefix)", ["お名前は何ですか。"]),
-            new("Which is it?", ["どれですか。"]),
+            new("Which one is it?", ["どれですか。"]),
             new("Which one is the water? (Which one is the one that is water?)", ["どれが水ですか。"]),
             new("Which one will you drink?", ["どれを飲みますか。"]),
             new("I eat a lot.", ["たくさん食べます。"]),
