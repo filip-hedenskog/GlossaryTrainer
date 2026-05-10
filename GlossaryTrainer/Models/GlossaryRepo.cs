@@ -54,13 +54,13 @@ internal static class GlossaryRepo
             new("(I'm) still a beginner.", ["まだ初心者です"]),
             new("(I'm) still studying / learning", ["まだ勉強中です"]),
             new("(I'm) not good yet", ["まだ上手ではありません", "まだ上手じゃありません", "まだ上手ではないです", "まだ上手じゃないです", "まだ下手です"]),
-            new("(I'm) improving / skills are getting better", ["上達しています"]),
+            new("(I'm) improving / (My) skills are getting better", ["上達しています"]),
             new("Isn't that difficult?　(that = something already mentioned)", ["それは難しくないですか", "それは難しくありませんか"]),
             new("The test yesterday was not easy at all.", ["昨日のテストは全然簡単じゃなかったです", "昨日のテストは全然簡単ではありませんでした"]),
-            new("Look at this.", ["これを見て"]),
+            new("Look at this.", ["これを見て", "これ見て"]),
             new("Do (you) remember?", ["覚えていますか"]),
-            new("(I) have not been looking at other students’ tests", ["他の学生のテストを見てはいません", "他の学生のテストは見ていません", "他の学生のテストを見ていません", "他の学生のテストを見ていないです", "他の学生のテストは見ていないです", "他の学生のテストを見てないです", "他の学生のテストを見てはいないです"]),
-
+            new("(I) have not been looking at other students’ tests", ["他の学生のテストを見てはいません", "他の学生のテストは見ていません", "他の学生のテストを見ていません", "他の学生のテストを見ていないです", "他の学生のテストは見ていないです", "他の学生のテストを見てないです", "他の学生のテストは見てないです", "他の学生のテストを見てはいないです"]),
+          
             new("(You) cannot look at other students' tests.", ["他の学生のテストを見てはいけません", "他の学生のテストを見てはだめです", "他の学生のテストを見てはいけないです"]),
             new("(You) cannot look at the textbook during the exam (prohibition (rule))", ["試験中は教科書を見てはいけません", "試験中に教科書を見てはいけません", "試験中は教科書を見てはいけないです", "試験中は教科書を見てはだめです"]),
             new("How do (you) write this kanji? (simple skill question (writing, reading, saying))", ["この漢字はどう書きますか"]),
