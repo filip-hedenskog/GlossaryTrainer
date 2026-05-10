@@ -832,7 +832,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("We're doing biology homework as a group.", ["グループでせいぶつがくのしゅくだいをします。", "グループで生物学の宿題をします。"]),
             new("We often practice Spanish as a group", ["グループでよくスペイン語を練習します", "よくグループでスペイン語を練習します", "グループでスペイン語をよく練習します"]),
             new("I occasionally practice Japanese with my classmate.", ["たまにクラスメイトと日本語を練習します。", "クラスメイトとたまに日本語を練習します。"]),
-            new("The economics assignments are difficult, but classes are fun.", ["けいざいがくのかだいはむずかしいけど、じゅぎょうはたのしいです。", "経済学の課題は難しいけど、授業は楽しいです。"]),
+            new("The economics assignments are difficult, but classes are fun.", ["けいざいがくのかだいはむずかしいけど、じゅぎょうはたのしいです。", "経済学の課題は難しいけど、授業は楽しいです", "経済学の課題は難しいけど、授業が楽しいです"]),
             new("economics textbook (published, printed, sold book)", ["けいざいがくのきょうかしょ", "経済学の教科書"]),
             new("Inside the media center is quiet and comfortable/cozy.", ["メディアセンターの中はしずかでかいてきです。", "メディアセンターの中は静かで快適です。"]),
             new("How's next month's schedule?", ["来月のスケジュールはどうですか。"]),
