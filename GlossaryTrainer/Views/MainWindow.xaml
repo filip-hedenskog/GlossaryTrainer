@@ -7,6 +7,7 @@
         Height="900"
         WindowStartupLocation="CenterScreen"
         prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:helpers="clr-namespace:GlossaryTrainer.Helpers"
         x:Name="MainWindowRoot">
 
     <Window.InputBindings>
@@ -128,7 +129,7 @@
         Height="22"
         Minimum="0"
         Maximum="{Binding TotalItems}"
-        Value="{Binding CurrentIndex}"
+        helpers:ProgressBarAnimation.AnimatedValue="{Binding CurrentIndex}"
         ToolTip="{Binding ProgressText}"
         BorderThickness="0"
         Background="#2B2B2B"
