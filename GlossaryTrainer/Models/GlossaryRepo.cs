@@ -2,6 +2,7 @@
 
 internal static class GlossaryRepo
 {
+    //new ("Section 4, unit 36 - Talk about school", [
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
@@ -10,16 +11,58 @@ internal static class GlossaryRepo
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
+
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
+    //]),
     public static List<Glossary> Load()
     =>
     [
         new("All", []),
+
+      new ("Section 4, unit 36 - Talk about school", [
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            new("“in the middle of studying / studying” (not なか)", ["べんきょうちゅう", "勉強中"]),
+            new("improvement / progress in skill", ["じょうたつ", "上達"]),
+            new("beginner", ["しょしんしゃ", "初心者"]),
+            new("“like that (over there)” / “in that way (far away)” (refers to something far from both speaker and listener, or as a realization/exclamation.)", ["ああ"]),
+            new("“like that” / “in that way” / “I hear that / is that so?” (refers to something close to the listener or what the listener just said)", ["そう"]),
+            new("“like this” / “in this way” / “such” (refers to something close to the speaker’s way or situation)", ["こう"]),
+            new("(I / someone) starts / will start / begin (something)　(someone actively starts something, there is a clear agent (doer)) (transitive verb)", ["はじめます", "始めます"]),
+            new("will begin / starts / is beginning　(something starts by itself, an event begins, a situation enters its starting phase) (intransitive verb)", ["はじまります", "始まります"]),
+            new("“ends” / “will end” / “is over” (ます form)", ["おわります", "終わります"]),
+            new("end / conclusion / finish", ["おわり", "終わり"]),
+            //
+            new("School has already begun / is already in session.", ["学校はもう始まっています", "学校はもう始まりました", "もう学校は始まっています", "もう学校は始まりました"]),
+            new("Classes have already begun / are already in session.", ["授業はもう始まっています", "授業はもう始まりました", "もう授業は始まっています", "もう授業は始まりました"]),
+            new("Has the homework already been finished?", ["宿題はもう終わりましたか", "もう宿題は終わりましたか"]),
+            new("(You) write it like this", ["こう書きます"]),
+            new("(You) read it like this", ["こう読みます"]),
+            new("(I'm) still a beginner.", ["まだ初心者です"]),
+            new("(I'm) still studying / learning", ["まだ勉強中です"]),
+            new("(I'm) not good yet", ["まだ上手ではありません", "まだ上手じゃありません", "まだ上手ではないです", "まだ上手じゃないです", "まだ下手です"]),
+            new("(I'm) improving / skills are getting better", ["上達しています"]),
+            new("Isn't that difficult?　(that = something already mentioned)", ["それは難しくないですか", "それは難しくありませんか"]),
+            new("The test yesterday was not easy at all.", ["昨日のテストは全然簡単じゃなかったです", "昨日のテストは全然簡単ではありませんでした"]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+    ]),
 
         new("Section 4, unit 35 - Describe nature", [
             //new("", ["", ""]),
@@ -49,7 +92,7 @@ internal static class GlossaryRepo
             new("to climb (something physically), to go up / move upward (general), to rise / ascend (formal, abstract, or natural phenomena)", ["のぼります", "登ります"]),
             new("(flowers) bloom / will bloom", ["さきます", "咲きます"]),
 
-            
+
             new("In spring many flowers bloom in the garden. (contrast/emphasis on spring, ます form)", ["春にはたくさんの花が庭に咲きます", "春になると、庭にたくさんの花が咲きます", "春、庭にたくさんの花が咲きます", "春には庭にたくさんの花が咲きます", "庭には春になるとたくさんの花が咲きます", "春には庭にたくさんの花が咲いています", "春には多くの花が庭に咲きます", "春になると、庭に多くの花が咲きます", "春、庭に多くの花が咲きます", "春には庭に多くの花が咲きます", "庭には春になると多くの花が咲きます", "春には庭に多くの花が咲いています"]),
             new("(The/A) boy is (in the state of) swimming in the sea.", ["男の子が海で泳いでいます", "男の子は海で泳いでいます"]),
             new("(The/A) monkey was born in Tokyo.", ["猿は東京で生まれました", "猿が東京で生まれました", "東京で猿が生まれました"]),
@@ -90,7 +133,7 @@ internal static class GlossaryRepo
             new("gray/grey (ash color)", ["はい色", "灰色"]),
             new("Loose / not tight, Relaxed / not strict (rules, attitude), Weak / mild (strength, effect)", ["ゆるい"]),
             new("Tight / too small, Hard / tough / demanding, Strong / intense (effects, tone, etc.)", ["きつい"]),
-            
+
             new("I wear summer clothes.", ["夏服を着ます", "夏の服を着ます"]),
             new("These shoes are tight.", ["この靴はきついです"]),
             new("I bought two pairs of socks.", ["靴下を二足買いました"]),
@@ -124,7 +167,7 @@ internal static class GlossaryRepo
             new("but/though/however (casual/conversational, often used at start of sentence, and sometimes after verbs/adjectives/nouns)", ["だけど"]),
             new("but/though/however (formal/written/speeches, after period/semicolon/paragraph/break/comma)", ["しかし"]),
             new("to hold up/open (an umbrella) / sunlight shines/light enters / to pour (tea/alcohol into a cup, unusual)", ["さします", "差します"]),
-            
+
             new("(I) will put up/open an umbrella.", ["傘を差します"]),
             new("Light is (in the state of) coming in through the window.", ["窓から光が差しています"]),
             new("The [meeting/conference] is progressing smoothly./The [meeting/conference] is going well.", ["会議が順調に進みます"]),
@@ -304,7 +347,7 @@ internal static class GlossaryRepo
             new("congratulations", ["おめでとう"]),
             new("'The year before last'", ["おととし", "一昨年"]),
             new("'The year after next'", ["さらいねん", "再来年"]),
-            
+
             new("It takes one day.", ["一日かかります。"]),
             new("It takes one year.", ["一年かかります。"]),
             new("It takes ten months.", ["十か月かかります。", "十ヶ月かかります。"]),
@@ -331,7 +374,7 @@ internal static class GlossaryRepo
             new("counter for long, cylindrical, stick-like objects (bottle, pen, umbrella, tree, banana, chopsticks)", ["本"]),
             new("glass (generic everyday cup / tumbler)", ["コップ"]),
 
-            
+
             new("One fork please. (counter for long, cylindrical, stick-like objects)", ["フォークを一本ください"]),
             new("Two chopsticks please. (honorific, counter for long, cylindrical, stick-like objects)", ["お箸を二本ください"]),
             new("(I) am really sorry.", ["本当にすみません。"]),
@@ -361,7 +404,7 @@ internal static class GlossaryRepo
             new("over there / that way / that person / that side (depends on ctx)　(polite あそこ)", ["あちら"]),
             new("there / that way / that side / you / your place (depends on ctx) (polite そこ)", ["そちら"]),
             new("which way / which direction / which one (polite)", ["どちら"]),
-            
+
 
             new("Which way is the exit?/Where is the exit?/Which direction is the exit?", ["出口はどちらですか。"]),
             new("How do you get home?/How are you going home?/How do you return home?", ["どうやって家に帰りますか。", "家にどうやって帰りますか。", "どうやって家まで帰りますか。", "家までどうやって帰りますか。"]),
