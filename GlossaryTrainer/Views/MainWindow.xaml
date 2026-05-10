@@ -121,10 +121,30 @@
 
         </StackPanel>
 
-        <!-- Result -->
-        <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding ProgressText}" Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}"
-                   FontSize="24"
-                   Foreground="#52ff8b"/>
+        <Grid Grid.Row="1"
+      Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+            <ProgressBar
+        Height="22"
+        Minimum="0"
+        Maximum="{Binding TotalItems}"
+        Value="{Binding CurrentIndex}"
+        ToolTip="{Binding ProgressText}"
+        BorderThickness="0"
+        Background="#2B2B2B"
+        VerticalAlignment="Center">
+
+                <ProgressBar.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#00F5FF" Offset="0"/>
+                        <GradientStop Color="#9D4EDD" Offset="0.5"/>
+                        <GradientStop Color="#FF00C8" Offset="1"/>
+                    </LinearGradientBrush>
+                </ProgressBar.Foreground>
+
+            </ProgressBar>
+        </Grid>
+        
         <StackPanel Grid.Row="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

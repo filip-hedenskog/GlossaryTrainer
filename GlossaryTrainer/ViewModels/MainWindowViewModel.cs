@@ -13,7 +13,6 @@ public class MainWindowViewModel : BindableBase
 {
     private List<GlossaryItem> _items;
     public List<GlossaryItem> FailedItems { get; } = [];
-    private int _currentIndex;
     private int _correctAnswers;
 
     public MainWindowViewModel()
@@ -46,7 +45,7 @@ public class MainWindowViewModel : BindableBase
         if (!CanRunPassOrFailedCommand)
             return;
 
-        UserInput = _items[_currentIndex].ValidTranslations.First();
+        UserInput = _items[CurrentIndex].ValidTranslations.First();
         Submit();
     }
 
@@ -64,7 +63,7 @@ public class MainWindowViewModel : BindableBase
         if (!CanRunPassOrFailedCommand)
             return;
 
-        var current = _items[_currentIndex];
+        var current = _items[CurrentIndex];
         FeedbackText = $"All answers: {Environment.NewLine}{string.Join(Environment.NewLine, current.ValidTranslations.Take(2))}";
         FeedbackColor = Brushes.DodgerBlue;
         PlayRevealSound();
@@ -109,8 +108,8 @@ public class MainWindowViewModel : BindableBase
         _items = SelectedGlossary.Name == "All"
             ? [.. AvailableGlossaries.SelectMany(g => g.Items).OrderBy(_ => Guid.NewGuid())]
             : [.. SelectedGlossary.Items.OrderBy(_ => Guid.NewGuid())];
-
-        _currentIndex = 0;
+        RaisePropertyChanged(nameof(TotalItems));
+        CurrentIndex = 0;
         _correctAnswers = 0;
         IsFinished = false;
         IsQuizStarted = true;
@@ -118,11 +117,29 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
-    public void UpdateProgressText()
+    public int CurrentIndex
     {
-        ProgressText = $"{_currentIndex}/{_items.Count}";
+        get => field;
+        set
+        {
+            if (SetProperty(ref field, value))
+            {
+                UpdateProgressText();
+            }
+        }
     }
-    public string ProgressText { get => field; set => SetProperty(ref field, value); }
+
+    public int TotalItems => _items?.Count ?? 0;
+    public string ProgressText
+    {
+        get => field;
+        set => SetProperty(ref field, value);
+    }
+    
+    private void UpdateProgressText()
+    {
+        ProgressText = $"{CurrentIndex}/{TotalItems}";
+    }
 
     private bool CanStartQuiz()
         => SelectedGlossary != null;
@@ -204,7 +221,7 @@ public class MainWindowViewModel : BindableBase
 
     private void Submit()
     {
-        var current = _items[_currentIndex];
+        var current = _items[CurrentIndex];
 
         bool isCorrect = current.ValidTranslations
                            .Any(v => string.Equals(UserInput?.Trim().TrimEnd('。'), v.TrimEnd('。'), StringComparison.OrdinalIgnoreCase));
@@ -233,7 +250,7 @@ public class MainWindowViewModel : BindableBase
             All translations:
             {allTranslations}
             """;
-        _currentIndex++;
+        CurrentIndex++;
         LoadCurrent();
     }
     private string _clipboardText = "";
@@ -248,14 +265,14 @@ public class MainWindowViewModel : BindableBase
         CanRunPassOrFailedCommand = true;
         UserInput = string.Empty;
 
-        if (_currentIndex >= _items.Count)
+        if (CurrentIndex >= _items.Count)
         {
             Finish();
             return;
         }
 
-        CurrentWord = _items[_currentIndex].Word;
-        UseJapaneseFont = _items[_currentIndex].UseJapaneseFont;
+        CurrentWord = _items[CurrentIndex].Word;
+        UseJapaneseFont = _items[CurrentIndex].UseJapaneseFont;
         NewWordLoaded?.Invoke();
     }
 
@@ -272,7 +289,7 @@ public class MainWindowViewModel : BindableBase
     {
         FeedbackText = "";
         FeedbackColor = Brushes.Black;
-        _currentIndex = 0;
+        CurrentIndex = 0;
         _correctAnswers = 0;
         IsFinished = false;
         FailedItems.Clear();
@@ -286,10 +303,11 @@ public class MainWindowViewModel : BindableBase
     {
         FeedbackText = "";
         FeedbackColor = Brushes.Black;
-        _currentIndex = 0;
+        CurrentIndex = 0;
         _correctAnswers = 0;
         IsFinished = false;
         _items = [.. FailedItems];
+        RaisePropertyChanged(nameof(TotalItems));
         FailedItems.Clear();
 
         _items.Sort((_, _) => Guid.NewGuid().CompareTo(Guid.NewGuid()));
@@ -364,7 +382,7 @@ public class MainWindowViewModel : BindableBase
         ScoreText = string.Empty;
 
         _items = null!;
-        _currentIndex = 0;
+        CurrentIndex = 0;
         _correctAnswers = 0;
         FailedItems.Clear();
     }
