@@ -63,7 +63,7 @@ internal static class GlossaryRepo
           
             new("(You) cannot look at other students' tests.", ["他の学生のテストを見てはいけません", "他の学生のテストを見てはだめです", "他の学生のテストを見てはいけないです"]),
             new("(You) cannot look at the textbook during the exam (prohibition (rule))", ["試験中は教科書を見てはいけません", "試験中に教科書を見てはいけません", "試験中は教科書を見てはいけないです", "試験中は教科書を見てはだめです"]),
-            new("How do (you) write this kanji? (simple skill question (writing, reading, saying))", ["この漢字はどう書きますか"]),
+            new("How do (you) write this kanji? (simple skill question (writing, reading, saying))", ["この漢字はどう書きますか", "この漢字をどう書きますか"]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
