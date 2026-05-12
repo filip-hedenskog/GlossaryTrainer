@@ -31,7 +31,7 @@ internal static class GlossaryRepo
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
-            //new("", ["", ""]),
+            new("“what kind of / what sort of”", ["どういう"]),
             new("“word / language / expression / speech”", ["ことば", "言葉"]),
             new("meaning / significance", ["いみ", "意味"]),
             new("“to pull” / “to draw” / “to subtract” (core idea: pulling something toward yourself)", ["だします", "引きます"]),
