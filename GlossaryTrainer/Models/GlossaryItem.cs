@@ -10,5 +10,5 @@ public class GlossaryItem
     }
     public string Word { get; }
     public bool UseJapaneseFont { get; }
-    public List<string> ValidTranslations { get; init; } = new();
+    public List<string> ValidTranslations { get; init; } = [];
 }

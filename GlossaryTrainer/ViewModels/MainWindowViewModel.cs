@@ -169,6 +169,8 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
+    private static readonly string ResourcesPath = Path.Combine(AppContext.BaseDirectory, "Resources");
+
     private string _clipboardText = "";
     private static readonly SolidColorBrush positiveFeedbackColor = new((Color)ColorConverter.ConvertFromString("#52ff8b"));
     private static readonly SolidColorBrush negativeFeedbackColor = new((Color)ColorConverter.ConvertFromString("#ff5996"));
@@ -229,7 +231,7 @@ public class MainWindowViewModel : BindableBase
 
     public void OnLoad()
     {
-        string defaultDirectory = @"C:\ProgramData\Glossaries";
+        string defaultDirectory = ResourcesPath;
         Directory.CreateDirectory(defaultDirectory);
 
         var dialog = new OpenFileDialog
@@ -256,7 +258,7 @@ public class MainWindowViewModel : BindableBase
 
     public void OnSave()
     {
-        string defaultDirectory = @"C:\ProgramData\Glossaries";
+        string defaultDirectory = ResourcesPath;
         Directory.CreateDirectory(defaultDirectory);
 
         var dialog = new SaveFileDialog
@@ -304,7 +306,7 @@ public class MainWindowViewModel : BindableBase
     public void PlaySound(string name)
     {
         var player = new MediaPlayer();
-        player.Open(new Uri($@"C:\ProgramData\Glossaries\{name}"));
+        player.Open(new Uri(Path.Combine(ResourcesPath, name)));
         player.Volume = 0.15;
         player.Play();
     }

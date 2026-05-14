@@ -1,6 +1,4 @@
-﻿using GlossaryTrainer.Models;
-
-namespace GlossaryTrainer.Models;
+﻿namespace GlossaryTrainer.Models;
 
 public class SelectableGlossary : BindableBase
 {
@@ -11,12 +9,6 @@ public class SelectableGlossary : BindableBase
         Glossary = glossary;
     }
 
-    private bool _isSelected;
-    public bool IsSelected
-    {
-        get => _isSelected;
-        set => SetProperty(ref _isSelected, value);
-    }
-
+    public bool IsSelected { get => field; set => SetProperty(ref field, value); }
     public string Name => Glossary.Name;
 }

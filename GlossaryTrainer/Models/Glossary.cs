@@ -12,5 +12,5 @@ public class Glossary
         Items = [.. items];
     }
     public string Name { get; set; } = string.Empty;
-    public List<GlossaryItem> Items { get; set; } = new();
+    public List<GlossaryItem> Items { get; set; } = [];
 }
