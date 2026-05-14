@@ -1,4 +1,4 @@
-﻿using GlossaryTrainer.Models;
+using GlossaryTrainer.Models;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -32,14 +32,80 @@ public class MainWindowViewModel : BindableBase
         SaveCommand = new DelegateCommand(OnSave, CanRunFailed)
             .ObservesProperty(() => FailedItems);
         SelectGlossaryCommand = new DelegateCommand(SelectGlossary);
-
         PassShortcutCommand = new DelegateCommand(OnPassShortcut);
         FailShortcutCommand = new DelegateCommand(OnFailShortcut);
         RevealShortcutCommand = new DelegateCommand(OnRevealShortcut);
         CopyFeedbackCommand = new DelegateCommand(CopyFeedback);
     }
 
+    public DelegateCommand StartCommand { get; }
+    public DelegateCommand SubmitCommand { get; }
+    public DelegateCommand RestartCommand { get; }
+    public DelegateCommand RunFailedCommand { get; }
+    public DelegateCommand LoadCommand { get; }
+    public DelegateCommand SaveCommand { get; }
+    public DelegateCommand SelectGlossaryCommand { get; }
+    public DelegateCommand PassShortcutCommand { get; }
+    public DelegateCommand FailShortcutCommand { get; }
+    public DelegateCommand RevealShortcutCommand { get; }
+    public DelegateCommand CopyFeedbackCommand { get; }
+
+    public Glossary? SelectedGlossary { get => field; set => SetProperty(ref field, value); }
+    public bool IsQuizStarted { get => field; set => SetProperty(ref field, value); }
+    public bool UseJapaneseFont { get => field; set => SetProperty(ref field, value); }
+    public bool IsFinished { get => field; set => SetProperty(ref field, value); }
+    public string FeedbackText { get => field; set => SetProperty(ref field, value); }
+    public string CurrentWord { get => field; set => SetProperty(ref field, value); }
+    public string UserInput { get => field; set => SetProperty(ref field, value); }
+    public string ScoreText { get => field; set => SetProperty(ref field, value); }
+    public string ProgressText { get => field; set => SetProperty(ref field, value); }
+    public Brush FeedbackColor { get => field; set => SetProperty(ref field, value); }
+
+    public ObservableCollection<Glossary> AvailableGlossaries { get; }
     public bool CanRunPassOrFailedCommand { get; set; }
+    public int TotalItems => _items?.Count ?? 0;
+    public event Action? NewWordLoaded;
+
+    public int CurrentIndex
+    {
+        get => field;
+        set
+        {
+            if (SetProperty(ref field, value))
+                UpdateProgressText();
+        }
+    }
+
+    private void UpdateProgressText()
+    {
+        ProgressText = $"{CurrentIndex}/{TotalItems}";
+    }
+
+    private void OnGlossarySelectionChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(SelectableGlossary.IsSelected))
+            StartCommand.RaiseCanExecuteChanged();
+    }
+
+    private void StartQuiz()
+    {
+        if (SelectedGlossary == null)
+            return;
+
+        _items = SelectedGlossary.Name == "All"
+            ? [.. AvailableGlossaries.SelectMany(g => g.Items).OrderBy(_ => Guid.NewGuid())]
+            : [.. SelectedGlossary.Items.OrderBy(_ => Guid.NewGuid())];
+        RaisePropertyChanged(nameof(TotalItems));
+        CurrentIndex = 0;
+        _correctAnswers = 0;
+        IsFinished = false;
+        IsQuizStarted = true;
+
+        LoadCurrent();
+    }
+
+    private bool CanStartQuiz() => SelectedGlossary != null;
+
     private void OnPassShortcut()
     {
         if (!CanRunPassOrFailedCommand)
@@ -69,154 +135,10 @@ public class MainWindowViewModel : BindableBase
         PlayRevealSound();
     }
 
-    public ObservableCollection<Glossary> AvailableGlossaries { get; }
-
-    private Glossary? _selectedGlossary;
-    public Glossary? SelectedGlossary
-    {
-        get => _selectedGlossary;
-        set => SetProperty(ref _selectedGlossary, value);
-    }
-
-    private void OnGlossarySelectionChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        if (e.PropertyName == nameof(SelectableGlossary.IsSelected))
-            StartCommand.RaiseCanExecuteChanged();
-    }
-
-
-    private bool _isQuizStarted;
-    public bool IsQuizStarted
-    {
-        get => _isQuizStarted;
-        set => SetProperty(ref _isQuizStarted, value);
-    }
-
-    public DelegateCommand StartCommand { get; }
-    public DelegateCommand LoadCommand { get; }
-    public DelegateCommand SaveCommand { get; }
-    public DelegateCommand RunFailedCommand { get; }
-    public DelegateCommand SelectGlossaryCommand { get; }
-    public DelegateCommand PassShortcutCommand { get; }
-    public DelegateCommand FailShortcutCommand { get; }
-    public DelegateCommand RevealShortcutCommand { get; }
-    private void StartQuiz()
-    {
-        if (SelectedGlossary == null)
-            return;
-
-        _items = SelectedGlossary.Name == "All"
-            ? [.. AvailableGlossaries.SelectMany(g => g.Items).OrderBy(_ => Guid.NewGuid())]
-            : [.. SelectedGlossary.Items.OrderBy(_ => Guid.NewGuid())];
-        RaisePropertyChanged(nameof(TotalItems));
-        CurrentIndex = 0;
-        _correctAnswers = 0;
-        IsFinished = false;
-        IsQuizStarted = true;
-
-        LoadCurrent();
-    }
-
-    public int CurrentIndex
-    {
-        get => field;
-        set
-        {
-            if (SetProperty(ref field, value))
-            {
-                UpdateProgressText();
-            }
-        }
-    }
-
-    public int TotalItems => _items?.Count ?? 0;
-    public string ProgressText
-    {
-        get => field;
-        set => SetProperty(ref field, value);
-    }
-    
-    private void UpdateProgressText()
-    {
-        ProgressText = $"{CurrentIndex}/{TotalItems}";
-    }
-
-    private bool CanStartQuiz()
-        => SelectedGlossary != null;
-
-
-    public event Action? NewWordLoaded;
-
-    // --------------------
-    // Bindable properties
-    // --------------------
-    private bool _useJapaneseFont;
-    public bool UseJapaneseFont
-    {
-        get => _useJapaneseFont;
-        set => SetProperty(ref _useJapaneseFont, value);
-    }
-
-    private string _feedbackText;
-    public string FeedbackText
-    {
-        get => _feedbackText;
-        set => SetProperty(ref _feedbackText, value);
-    }
-
-
-    private Brush _feedbackColor;
-    public Brush FeedbackColor
-    {
-        get => _feedbackColor;
-        set => SetProperty(ref _feedbackColor, value);
-    }
-
-    private string _currentWord;
-    public string CurrentWord
-    {
-        get => _currentWord;
-        set => SetProperty(ref _currentWord, value);
-    }
-
-    private string _userInput;
-    public string UserInput
-    {
-        get => _userInput;
-        set => SetProperty(ref _userInput, value);
-    }
-
-    private bool _isFinished;
-    public bool IsFinished
-    {
-        get => _isFinished;
-        set => SetProperty(ref _isFinished, value);
-    }
-
-    private string _scoreText;
-    public string ScoreText
-    {
-        get => _scoreText;
-        set => SetProperty(ref _scoreText, value);
-    }
-
-    // --------------------
-    // Commands
-    // --------------------
-
-    public DelegateCommand CopyFeedbackCommand { get; }
-    public DelegateCommand SubmitCommand { get; }
-    public DelegateCommand RestartCommand { get; }
-
-    // --------------------
-    // Logic
-    // --------------------
     private void CopyFeedback()
     {
         if (!string.IsNullOrEmpty(_clipboardText))
-        {
             Clipboard.SetText(_clipboardText);
-        }
     }
 
     private void Submit()
@@ -253,11 +175,13 @@ public class MainWindowViewModel : BindableBase
         CurrentIndex++;
         LoadCurrent();
     }
+
     private string _clipboardText = "";
     private static readonly SolidColorBrush positiveFeedbackColor = new((Color)ColorConverter.ConvertFromString("#52ff8b"));
     private static readonly SolidColorBrush negativeFeedbackColor = new((Color)ColorConverter.ConvertFromString("#ff5996"));
-    private bool CanSubmit()
-        => !string.IsNullOrWhiteSpace(UserInput);
+
+    private bool CanSubmit() => !string.IsNullOrWhiteSpace(UserInput);
+    private bool CanRunFailed() => FailedItems.Count != 0;
 
     private void LoadCurrent()
     {
@@ -298,7 +222,6 @@ public class MainWindowViewModel : BindableBase
         LoadCurrent();
     }
 
-    private bool CanRunFailed() => FailedItems.Count != 0;
     private void RunFailed()
     {
         FeedbackText = "";
@@ -387,25 +310,10 @@ public class MainWindowViewModel : BindableBase
         FailedItems.Clear();
     }
 
-    public void PlayRevealSound()
-    {
-        PlaySound("Reveal.wav");
-    }
-
-    public void PlayCorrectSound()
-    {
-        PlaySound("Correct.wav");
-    }
-
-    public void PlayFailedSound()
-    {
-        PlaySound("Wrong.wav");
-    }
-
-    public void PlayDoneSound()
-    {
-        PlaySound("Done.wav");
-    }
+    public void PlayRevealSound() => PlaySound("Reveal.wav");
+    public void PlayCorrectSound() => PlaySound("Correct.wav");
+    public void PlayFailedSound() => PlaySound("Wrong.wav");
+    public void PlayDoneSound() => PlaySound("Done.wav");
 
     public void PlaySound(string name)
     {

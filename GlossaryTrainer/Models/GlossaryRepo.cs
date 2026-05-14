@@ -24,13 +24,57 @@ internal static class GlossaryRepo
     [
         new("All", []),
 
+        new ("Section 4, unit 37 - Shop at a convenience store", [
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            new("“bag / sack / pouch”", ["ふくろ", "袋"]),
+
+
+            new("Please enter. (honorific, often used by staff/hosts)", ["お入りください"]),
+            new("Please wait. (honorific, formal/customer-service style)", ["お待ちください"]),
+            new("What do you need?", ["何が要りますか"]),
+            new("Do you need a (shopping) bag?", ["袋は要りますか"]),
+            new("I bought two (shopping) bags.", ["袋を二枚買いました"]),
+            new("This snack is a bit sweet. (formal/polite/refined for 'a bit')", ["このお菓子は少々甘いです"]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            //new("", ["", ""]),
+            ]),
+
       new ("Section 4, unit 36 - Talk about school", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
-            //new("", ["", ""]),
+            new("“a little more / a bit more / some more”", ["もう少し"]),
             new("“what kind of / what sort of”", ["どういう"]),
             new("“word / language / expression / speech”", ["ことば", "言葉"]),
             new("meaning / significance", ["いみ", "意味"]),
@@ -62,7 +106,7 @@ internal static class GlossaryRepo
             new("Look at this.", ["これを見て", "これ見て"]),
             new("Do (you) remember?", ["覚えていますか"]),
             new("(I) have not been looking at other students’ tests", ["他の学生のテストを見てはいません", "他の学生のテストは見ていません", "他の学生のテストを見ていません", "他の学生のテストを見ていないです", "他の学生のテストは見ていないです", "他の学生のテストを見てないです", "他の学生のテストは見てないです", "他の学生のテストを見てはいないです"]),
-          
+
             new("(You) cannot look at other students' tests.", ["他の学生のテストを見てはいけません", "他の学生のテストを見てはだめです", "他の学生のテストを見てはいけないです"]),
             new("(You) cannot look at the textbook during the exam (prohibition (rule))", ["試験中は教科書を見てはいけません", "試験中に教科書を見てはいけません", "試験中は教科書を見てはいけないです", "試験中は教科書を見てはだめです"]),
             new("How do (you) write this kanji? (simple skill question (writing, reading, saying))", ["この漢字はどう書きますか", "この漢字をどう書きますか"]),
@@ -77,11 +121,17 @@ internal static class GlossaryRepo
             new("Please tell me (your) name. (honorific)", ["お名前を教えてください"]),
             new("(I) will memorize the meaning of the kanji.", ["漢字の意味を覚えます"]),
             new("This word has a lot of meanings.", ["この言葉はたくさんの意味があります", "この言葉はたくさん意味があります", "この言葉にはたくさんの意味があります", "この言葉は色々な意味があります", "この言葉は多くの意味を持っています"]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
+            new("It’s not finished yet./(I) haven't finished yet.", ["まだ終わってないです", "まだ終わっていないです", "まだ終わっていません"]),
+            new("(I’m) going to sleep now./(I’ll) go to bed now. (Extremely common expression)", ["もう寝ます"]),
+            new("Please write it in kanji.", ["漢字で書いてください"]),
+            new("Please consult a dictionary.", ["辞書を引いてください"]),
+            new("(I) have not finished the homework yet.", ["まだ宿題が終わっていません", "宿題がまだ終わっていません", "まだ宿題は終わっていません", "宿題はまだ終わっていません"]),
+            new("(My) work ended, (and I) went to the party.", ["仕事が終わって、パーティーに行きました", "仕事が終わって、パーティーへ行きました"]),
+            new("(I) don't remember.", ["覚えていません"]),
+            new("The movie has not started yet.", ["映画はまだ始まっていません"]),
+            new("(I) memorized a lot of kanji.", ["たくさんの漢字を覚えました", "漢字をたくさん覚えました"]),
+            new("(I) want a little more. (Extremely common expression)", ["もう少し欲しいです"]),
+            new("Is there a slightly brighter color? (shopping situation)", ["もう少し明るい色はありますか"]),
             //new("", ["", ""]),
     ]),
 
@@ -600,7 +650,7 @@ new("Section 4, unit 22 - Describe extended family", [
     ]),
 
     new("Section 4, unit 21 - Talk about hobbies", [
-            new("counter for flat objects (paper, stamps, photos, plates, tickets, T-shirts)", ["まい", "枚"]),
+            new("counter for flat objects (paper, stamps, photos, plates, tickets, T-shirts、 bags)", ["まい", "枚"]),
             new("a walk / a stroll", ["さんぽ", "散歩"]),
 
 
@@ -1208,6 +1258,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("finally", ["やっと"]),
             new("I came here by train", ["電車でここに来ました", "電車でここまで来ました"]),
             new("Did (you) oversleep?", ["寝坊しましたか"]),
+            new("Shall (we) hurry?", ["急ぎましょうか"]),
         ]),
     ];
 
