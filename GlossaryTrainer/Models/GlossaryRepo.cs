@@ -126,7 +126,7 @@ internal static class GlossaryRepo
             new("Please write it in kanji.", ["漢字で書いてください"]),
             new("Please consult a dictionary.", ["辞書を引いてください"]),
             new("(I) have not finished the homework yet.", ["まだ宿題が終わっていません", "宿題がまだ終わっていません", "まだ宿題は終わっていません", "宿題はまだ終わっていません"]),
-            new("(My) work ended, (and I) went to the party.", ["仕事が終わって、パーティーに行きました", "仕事が終わって、パーティーへ行きました"]),
+            new("(My) work ended, (and I) went to the party.", ["仕事が終わって、パーティーに行きました", "仕事が終わって、パーティーへ行きました", "仕事は終わって、パーティーに行きました", "仕事は終わって、パーティーへ行きました"]),
             new("(I) don't remember.", ["覚えていません"]),
             new("The movie has not started yet.", ["映画はまだ始まっていません"]),
             new("(I) memorized a lot of kanji.", ["たくさんの漢字を覚えました", "漢字をたくさん覚えました"]),

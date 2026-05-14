@@ -1,7 +1,6 @@
 using GlossaryTrainer.Models;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.IO;
 using System.Text.Json;
 using System.Windows;
@@ -62,7 +61,7 @@ public class MainWindowViewModel : BindableBase
     public Brush FeedbackColor { get => field; set => SetProperty(ref field, value); }
 
     public ObservableCollection<Glossary> AvailableGlossaries { get; }
-    public bool CanRunPassOrFailedCommand { get; set; }
+    private bool CanRunPassOrFailedCommand { get; set; }
     public int TotalItems => _items?.Count ?? 0;
     public event Action? NewWordLoaded;
 
@@ -79,12 +78,6 @@ public class MainWindowViewModel : BindableBase
     private void UpdateProgressText()
     {
         ProgressText = $"{CurrentIndex}/{TotalItems}";
-    }
-
-    private void OnGlossarySelectionChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        if (e.PropertyName == nameof(SelectableGlossary.IsSelected))
-            StartCommand.RaiseCanExecuteChanged();
     }
 
     private void StartQuiz()
@@ -185,7 +178,6 @@ public class MainWindowViewModel : BindableBase
 
     private void LoadCurrent()
     {
-        UpdateProgressText();
         CanRunPassOrFailedCommand = true;
         UserInput = string.Empty;
 
@@ -209,31 +201,29 @@ public class MainWindowViewModel : BindableBase
         RaisePropertyChanged(nameof(FailedItems));
     }
 
-    private void Restart()
+    private void ResetQuiz()
     {
         FeedbackText = "";
         FeedbackColor = Brushes.Black;
         CurrentIndex = 0;
         _correctAnswers = 0;
         IsFinished = false;
-        FailedItems.Clear();
+    }
 
-        _items.Sort((_, _) => Guid.NewGuid().CompareTo(Guid.NewGuid()));
+    private void Restart()
+    {
+        ResetQuiz();
+        FailedItems.Clear();
+        _items = [.. _items.OrderBy(_ => Guid.NewGuid())];
         LoadCurrent();
     }
 
     private void RunFailed()
     {
-        FeedbackText = "";
-        FeedbackColor = Brushes.Black;
-        CurrentIndex = 0;
-        _correctAnswers = 0;
-        IsFinished = false;
-        _items = [.. FailedItems];
+        ResetQuiz();
+        _items = [.. FailedItems.OrderBy(_ => Guid.NewGuid())];
         RaisePropertyChanged(nameof(TotalItems));
         FailedItems.Clear();
-
-        _items.Sort((_, _) => Guid.NewGuid().CompareTo(Guid.NewGuid()));
         LoadCurrent();
     }
 
@@ -291,13 +281,9 @@ public class MainWindowViewModel : BindableBase
 
     private void SelectGlossary()
     {
-        FeedbackText = "";
-        FeedbackColor = Brushes.Black;
         IsFinished = false;
         IsQuizStarted = false;
-
         SelectedGlossary = null;
-
         FeedbackText = string.Empty;
         FeedbackColor = Brushes.Black;
         CurrentWord = string.Empty;
