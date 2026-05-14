@@ -1,185 +1,169 @@
-﻿<Window x:Class="GlossaryTrainer.Views.MainWindow"
+<Window x:Class="GlossaryTrainer.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:helpers="clr-namespace:GlossaryTrainer.Helpers"
+        x:Name="MainWindowRoot"
         Title="Glossary Trainer"
         Width="1200"
         Height="900"
         WindowStartupLocation="CenterScreen"
-        prism:ViewModelLocator.AutoWireViewModel="True"
-        xmlns:helpers="clr-namespace:GlossaryTrainer.Helpers"
-        x:Name="MainWindowRoot">
+        prism:ViewModelLocator.AutoWireViewModel="True">
 
     <Window.InputBindings>
         <KeyBinding Key="F1" Command="{Binding PassShortcutCommand}" />
         <KeyBinding Key="F2" Command="{Binding FailShortcutCommand}" />
         <KeyBinding Key="F3" Command="{Binding RevealShortcutCommand}" />
-        <KeyBinding Key="C"
-                Modifiers="Control"
-                Command="{Binding CopyFeedbackCommand}" />
+        <KeyBinding Key="C" Modifiers="Control" Command="{Binding CopyFeedbackCommand}" />
     </Window.InputBindings>
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <!-- Glossary selection -->
         <StackPanel Visibility="{Binding IsQuizStarted, Converter={StaticResource InverseBoolToVis}}">
             <TextBlock Text="Select glossary"
-               FontSize="22"
-               FontWeight="Bold"
-               Margin="0,0,0,10"/>
-
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10" />
             <ComboBox ItemsSource="{Binding AvailableGlossaries}"
-              SelectedItem="{Binding SelectedGlossary}"
-              DisplayMemberPath="Name"
-              Height="35"
-              FontSize="16"
-              Margin="0,0,0,15"/>
-
+                      SelectedItem="{Binding SelectedGlossary}"
+                      DisplayMemberPath="Name"
+                      Height="35"
+                      FontSize="16"
+                      Margin="0,0,0,15" />
             <Button Content="Start"
                     IsDefault="True"
                     Height="35"
                     FontSize="16"
-                    Command="{Binding StartCommand}" 
-                    Margin="5"/>
+                    Command="{Binding StartCommand}"
+                    Margin="5" />
             <Button Content="Load"
                     Height="35"
                     FontSize="16"
                     Command="{Binding LoadCommand}"
-                    Margin="5"/>
+                    Margin="5" />
         </StackPanel>
 
         <!-- Quiz -->
-        <StackPanel Orientation="Vertical" Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
-
-            <TextBlock
-                Text="{Binding CurrentWord}"
-                FontSize="24"
-                HorizontalAlignment="Left"
-                TextWrapping="Wrap"
-                MaxHeight="100"
-                Margin="0,0,0,20">
+        <StackPanel Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <TextBlock Text="{Binding CurrentWord}"
+                       FontSize="24"
+                       HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       MaxHeight="100"
+                       Margin="0,0,0,20">
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
-                        <Setter Property="FontFamily" Value="Segoe UI"/>
+                        <Setter Property="FontFamily" Value="Segoe UI" />
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding UseJapaneseFont}" Value="True">
                                 <Setter Property="FontFamily"
-                            Value="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"/>
+                                        Value="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
 
-            <TextBox
-                x:Name="UserInputTextBox"
-                Text="{Binding UserInput, UpdateSourceTrigger=PropertyChanged}"
-                MinHeight="42"
-                MaxHeight="126"
-                FontSize="30"
-                FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
-                Margin="0,0,0,10"
-                Background="#05001f"
-                Foreground="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
-                TextWrapping="Wrap"
-                VerticalContentAlignment="Top">
+            <TextBox x:Name="UserInputTextBox"
+                     Text="{Binding UserInput, UpdateSourceTrigger=PropertyChanged}"
+                     MinHeight="42"
+                     MaxHeight="126"
+                     FontSize="30"
+                     FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
+                     Margin="0,0,0,10"
+                     Background="#05001f"
+                     Foreground="{DynamicResource {x:Static SystemColors.AccentColorLight3BrushKey}}"
+                     TextWrapping="Wrap"
+                     VerticalContentAlignment="Top">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <!--<Setter Property="Background" Value="Green"/>-->
-                        <Setter Property="IsEnabled" Value="True"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding IsFinished}" Value="True">
-                                <Setter Property="IsEnabled" Value="False"/>
+                                <Setter Property="IsEnabled" Value="False" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </TextBox.Style>
             </TextBox>
 
-            <Button
-                Content="Submit"
-                IsDefault="True"
-                Height="35"
-                FontSize="16"
-                Command="{Binding SubmitCommand}"/>
+            <Button Content="Submit"
+                    IsDefault="True"
+                    Height="35"
+                    FontSize="16"
+                    Command="{Binding SubmitCommand}" />
 
             <ScrollViewer Height="500"
-              VerticalScrollBarVisibility="Auto"
-              HorizontalScrollBarVisibility="Disabled"
-              Margin="0,5,0,10">
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Margin="0,5,0,10">
                 <TextBlock Text="{Binding FeedbackText}"
-                       Foreground="{Binding FeedbackColor}"
-                       FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
-                       FontSize="30"
-                       TextWrapping="Wrap"
-                       HorizontalAlignment="Left"
-                       Margin="0,5,0,10"/>
+                           Foreground="{Binding FeedbackColor}"
+                           FontFamily="pack://application:,,,/Fonts/NotoSansJP-VariableFont_wght.ttf#Noto Sans JP"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="0,5,0,10" />
             </ScrollViewer>
-
         </StackPanel>
 
+        <!-- Progress bar -->
         <Grid Grid.Row="1"
-      Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
-
-            <ProgressBar
-        Height="22"
-        Minimum="0"
-        Maximum="{Binding TotalItems}"
-        helpers:ProgressBarAnimation.AnimatedValue="{Binding CurrentIndex}"
-        ToolTip="{Binding ProgressText}"
-        BorderThickness="0"
-        Background="#2B2B2B"
-        VerticalAlignment="Center">
-
+              Visibility="{Binding IsQuizStarted, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <ProgressBar Height="22"
+                         Minimum="0"
+                         Maximum="{Binding TotalItems}"
+                         helpers:ProgressBarAnimation.AnimatedValue="{Binding CurrentIndex}"
+                         ToolTip="{Binding ProgressText}"
+                         BorderThickness="0"
+                         Background="#2B2B2B"
+                         VerticalAlignment="Center">
                 <ProgressBar.Foreground>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#00F5FF" Offset="0"/>
-                        <GradientStop Color="#9D4EDD" Offset="0.5"/>
-                        <GradientStop Color="#FF00C8" Offset="1"/>
+                        <GradientStop Color="#00F5FF" Offset="0" />
+                        <GradientStop Color="#9D4EDD" Offset="0.5" />
+                        <GradientStop Color="#FF00C8" Offset="1" />
                     </LinearGradientBrush>
                 </ProgressBar.Foreground>
-
             </ProgressBar>
         </Grid>
-        
+
+        <!-- Finish panel -->
         <StackPanel Grid.Row="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="{Binding IsFinished, Converter={StaticResource BooleanToVisibilityConverter}}">
-
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="{Binding IsFinished, Converter={StaticResource BooleanToVisibilityConverter}}">
             <TextBlock Text="{Binding ScoreText}"
-               FontSize="22"
-               FontWeight="Bold"
-               Margin="0,0,0,20"
-               HorizontalAlignment="Center"/>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
                 <Button Content="Save failed"
-                Command="{Binding SaveCommand}"
-                Width="120"
-                Height="30"
-                Margin="0,0,10,0"/>
-
+                        Command="{Binding SaveCommand}"
+                        Width="120"
+                        Height="30"
+                        Margin="0,0,10,0" />
                 <Button Content="Run failed"
-                Command="{Binding RunFailedCommand}"
-                Width="120"
-                Height="30"
-                Margin="0,0,10,0"/>
-
+                        Command="{Binding RunFailedCommand}"
+                        Width="120"
+                        Height="30"
+                        Margin="0,0,10,0" />
                 <Button Content="Restart"
-                Command="{Binding RestartCommand}"
-                Width="120"
-                Height="30"
-                Margin="0,0,10,0"/>
-
+                        Command="{Binding RestartCommand}"
+                        Width="120"
+                        Height="30"
+                        Margin="0,0,10,0" />
                 <Button Content="Select glossary"
-                Command="{Binding SelectGlossaryCommand}"
-                Width="140"
-                Height="30"/>
+                        Command="{Binding SelectGlossaryCommand}"
+                        Width="140"
+                        Height="30" />
             </StackPanel>
         </StackPanel>
     </Grid>
