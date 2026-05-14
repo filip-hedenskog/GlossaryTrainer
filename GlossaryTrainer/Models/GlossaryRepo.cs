@@ -2,49 +2,12 @@
 
 internal static class GlossaryRepo
 {
-    //new ("40 - School and studying", [
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //new("", ["", ""]),
-    //]),
     public static List<Glossary> Load()
     =>
     [
         new("All", []),
 
         new ("41 - Convenience store shopping", [
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
             new("“bag / sack / pouch”", ["ふくろ", "袋"]),
 
 
@@ -54,26 +17,9 @@ internal static class GlossaryRepo
             new("Do you need a (shopping) bag?", ["袋は要りますか"]),
             new("I bought two (shopping) bags.", ["袋を二枚買いました"]),
             new("This snack is a bit sweet. (formal/polite/refined for 'a bit')", ["このお菓子は少々甘いです"]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
             ]),
 
       new ("40 - School and studying", [
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
             new("“a little more / a bit more / some more”", ["もう少し"]),
             new("“what kind of / what sort of”", ["どういう"]),
             new("“word / language / expression / speech”", ["ことば", "言葉"]),
@@ -91,7 +37,6 @@ internal static class GlossaryRepo
             new("will begin / starts / is beginning　(something starts by itself, an event begins, a situation enters its starting phase) (intransitive verb)", ["はじまります", "始まります"]),
             new("“ends” / “will end” / “is over” (ます form)", ["おわります", "終わります"]),
             new("end / conclusion / finish", ["おわり", "終わり"]),
-            //
             new("School has already begun / is already in session.", ["学校はもう始まっています", "学校はもう始まりました", "もう学校は始まっています", "もう学校は始まりました"]),
             new("Classes have already begun / are already in session.", ["授業はもう始まっています", "授業はもう始まりました", "もう授業は始まっています", "もう授業は始まりました"]),
             new("Has the homework already been finished?", ["宿題はもう終わりましたか", "もう宿題は終わりましたか"]),
@@ -132,20 +77,9 @@ internal static class GlossaryRepo
             new("(I) memorized a lot of kanji.", ["たくさんの漢字を覚えました", "漢字をたくさん覚えました"]),
             new("(I) want a little more. (Extremely common expression)", ["もう少し欲しいです"]),
             new("Is there a slightly brighter color? (shopping situation)", ["もう少し明るい色はありますか"]),
-            //new("", ["", ""]),
     ]),
 
         new("39 - Nature vocabulary", [
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
-            //new("", ["", ""]),
             new("'inside the store / in-store' (more formal than 店の中)", ["てんない", "店内"]),
             new("horse", ["うま", "馬"]),
             new("cow", ["うし", "牛"]),
@@ -485,7 +419,6 @@ internal static class GlossaryRepo
             new("First, you pass by a small bank. (First, (you/I) pass through the vicinity of a small bank (move along a route near it).)", ["まず、小さな銀行のそばを通ります。", "まず、小さい銀行のそばを通ります。", "初めに、小さな銀行のそばを通ります。", "初めに、小さい銀行のそばを通ります。"]),
             new("(It's) a small hospital.", ["小さな病院です。", "小さい病院です。"]),
             new("Please open the store now. (As for the shop, please open it now.)", ["店を今開けてください", "今店を開けてください"]),
-            //This path goes west. この道は西に行きます
         ]),
 
         new("31 - Food and drink vocabulary", [
