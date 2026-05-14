@@ -298,10 +298,10 @@ public class MainWindowViewModel : BindableBase
         FailedItems.Clear();
     }
 
-    public void PlayRevealSound() => PlaySound("Reveal.wav");
-    public void PlayCorrectSound() => PlaySound("Correct.wav");
-    public void PlayFailedSound() => PlaySound("Wrong.wav");
-    public void PlayDoneSound() => PlaySound("Done.wav");
+    public void PlayRevealSound() => PlaySound("Reveal.mp3");
+    public void PlayCorrectSound() => PlaySound("Correct.mp3");
+    public void PlayFailedSound() => PlaySound("Wrong.mp3");
+    public void PlayDoneSound() => PlaySound("Done.mp3");
 
     public void PlaySound(string name)
     {
