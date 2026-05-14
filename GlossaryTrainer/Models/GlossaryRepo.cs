@@ -2,7 +2,7 @@
 
 internal static class GlossaryRepo
 {
-    //new ("Section 4, unit 36 - Talk about school", [
+    //new ("40 - School and studying", [
     //new("", ["", ""]),
     //new("", ["", ""]),
     //new("", ["", ""]),
@@ -24,7 +24,7 @@ internal static class GlossaryRepo
     [
         new("All", []),
 
-        new ("Section 4, unit 37 - Shop at a convenience store", [
+        new ("41 - Convenience store shopping", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -68,7 +68,7 @@ internal static class GlossaryRepo
             //new("", ["", ""]),
             ]),
 
-      new ("Section 4, unit 36 - Talk about school", [
+      new ("40 - School and studying", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -135,7 +135,7 @@ internal static class GlossaryRepo
             //new("", ["", ""]),
     ]),
 
-        new("Section 4, unit 35 - Describe nature", [
+        new("39 - Nature vocabulary", [
             //new("", ["", ""]),
             //new("", ["", ""]),
             //new("", ["", ""]),
@@ -184,7 +184,7 @@ internal static class GlossaryRepo
             new("A cow is standing over there. (ている form)", ["牛はあそこで立っています", "牛があそこで立っています", "あそこで牛が立っています", "あそこで牛は立っています"]),
             ]),
 
-        new("Section 4, unit 34 - Discuss belongings", [
+        new("38 - Belongings and possessions", [
             new("gently / softly / quietly / carefully (so as not to disturb or make noise)", ["そっと"]),
             new("mobile phone", ["けいたいでんわ", "携帯電話"]),
             new("I will turn off / erase / delete / extinguish", ["けします", "消します"]),
@@ -222,7 +222,7 @@ internal static class GlossaryRepo
             new("How many beds are there?", ["ベッドは何台ありますか", "ベッドはいくつありますか"]),
             ]),
 
-        new("Section 4, unit 33 - Discuss weather", [
+        new("37 - Weather and seasons", [
             new("direction / way (direction (“that side”), comparison or preference (“A side” instead of B))", ["ほう", "方"]),
             new("corner / edge / sharp point (A physical edge or point where surfaces meet) (sharp geometry corner, something you can physically bump into)", ["かど", "角"]),
             new("skilled / good at something / proficient", ["じょうず", "上手"]),
@@ -289,7 +289,7 @@ internal static class GlossaryRepo
             new("I forgot snacks.", ["お菓子を忘れました"]),
             ]),
 
-        new("Section 4, unit 32 - Discuss relationships", [
+        new("36 - Relationships and people", [
             new("single (unmarried)", ["どくしん", "独身"]),
             new("to be born (polite form)", ["うまれます", "生まれます"]),
             new("divorce / to get divorced", ["りこん", "離婚"]),
@@ -347,7 +347,7 @@ internal static class GlossaryRepo
             new("We are three people (in my family): my parents and me. (female/netural gender)", ["両親と私の三人です", "両親と私の三人家族です", "私と両親の三人です", "私と両親の三人家族です", "三人家族です"]),
         ]),
 
-        new("Section 4, unit 31 - Shop for common items", [
+        new("35 - Everyday shopping", [
             new("to hold / to carry / to have/possess / to keep/maintain (depending on context)", ["もちます", "持ちます"]),
             new("for (someone) / from the perspective of (someone)", ["にとって"]),
             new("take out / produce / bring out (core idea: moving something outward, not necessarily by pulling)", ["だします", "出します"]),
@@ -409,7 +409,7 @@ internal static class GlossaryRepo
             new("May I carry the bag?", ["鞄を持ってもいいですか"]),
             ]),
 
-        new("Section 4, unit 30 - Express days and times", [
+        new("34 - Expressing time and dates", [
             new("'counter for birds and winged animals'", ["わ", "羽"]),
             new("'every night'", ["まいばん", "毎晩"]),
             new("'every month'", ["まいつき", "毎月"]),
@@ -434,7 +434,7 @@ internal static class GlossaryRepo
             new("I travel to the US every year. (Every year to Amerika for travel, (I) go)", ["毎年アメリカへ旅行に行きます。", "毎年アメリカへ旅行します。", "毎年アメリカに旅行に行きます。", "毎年アメリカに旅行します。", "毎年アメリカまで旅行に行きます。"]),
             ]),
 
-        new("Section 4, unit 29 - Discuss food you like", [
+        new("33 - Food preferences", [
             new("sour", ["すっぱい", "酸っぱい"]),
             new("'favorite food'/'favorite thing to eat'", ["こうぶつ", "好物"]),
             new("glass drinking glass / more stylish beverage glass", ["グラス"]),
@@ -459,7 +459,7 @@ internal static class GlossaryRepo
             new("(I) eat sushi with chopsticks. (honorific)", ["お箸で寿司を食べます。", "箸で寿司を食べます。"]),
             ]),
 
-        new("Section 4, unit 28 - Get directions", [
+        new("32 - Asking for directions", [
             new("right beside / close to something (beside/adjacent/closely related) (“right around here/next to this thing”) (closer, narrower, more “next to” and less flexible than 近く)", ["そば"]),
             new("street (name)/“way things pass/flow”(often urban streets/named streets/emphasizes people/traffic passing through)", ["とおり", "通り"]),
             new("to pass through / to go through / to pass by", ["とおります", "通ります"]),
@@ -488,7 +488,7 @@ internal static class GlossaryRepo
             //This path goes west. この道は西に行きます
         ]),
 
-        new("Section 4, unit 27 - Talk about food and drink", [
+        new("31 - Food and drink vocabulary", [
             new("completely/entirely/at all/really (more emphatic/strong than 全然)", ["まったく"]),
             new("few/not many/not much/little/small amount (when the quantity or number of something is low)", ["すくない", "少ない"]),
             new("mint", ["ミント"]),
@@ -521,7 +521,7 @@ internal static class GlossaryRepo
             new("All (of them) are tasty.", ["全部美味しいです。"]),
             ]),
 
-        new("Section 4, unit 26 - Discuss weather", [
+        new("30 - Discussing the weather", [
             new("daytime", ["ひるま", "昼間"]),
             new("This morning", ["けさ", "今朝"]),
             new("last night / the previous evening", ["ゆうべ", "夕べ"]),
@@ -556,7 +556,7 @@ internal static class GlossaryRepo
             new("Yesterday was cloudy. (As for yesterday, it was in a cloudy state.)", ["昨日は曇っていました"]),
         ]),
 
-        new("Section 4, unit 25 - Describe your hobbies", [
+        new("29 - Hobbies and activities", [
             new("the week after next / in two weeks (from next week)", ["さらいしゅう", "再来週"]),
             new("I will teach/tell/inform", ["おしえます", "教えます"]),
             new("what (subject marker)", ["何が"]),
@@ -588,12 +588,12 @@ internal static class GlossaryRepo
             new("What food did you make?", ["何の料理を作りましたか。"]),
         ]),
 
-        new("Section 4, unit 24 - Talk about clothes", [
+        new("28 - Clothing vocabulary", [
             new("to wear (on the head)", ["かぶります", "被ります"]),
             new("pants", ["ズボン"]),
         ]),
 
-        new("Section 4, unit 23 - Take public transit", [
+        new("27 - Public transit", [
             new("far/a distant place", ["とおく", "遠く"]),
             new("slow/late/delayed", ["おそい", "遅い"]),
             new("bicycle", ["じてんしゃ", "自転車"]),
@@ -612,7 +612,7 @@ internal static class GlossaryRepo
             new("Isn't it dirty?", ["汚くないですか。"]),
         ]),
 
-new("Section 4, unit 22 - Describe extended family", [
+new("26 - Extended family", [
         new("grandfather / elderly man (someone else's)", ["おじいさん"]),
         new("grandmother / elderly woman (someone else's)", ["おばあさん"]),
         new("child (polite, another one's child(ren))", ["おこさん", "お子さん"]),
@@ -649,7 +649,7 @@ new("Section 4, unit 22 - Describe extended family", [
         new("Do you have grandchildren? (Are there grandchildren?) (honorific)", ["お孫さんがいますか。", "お孫さんはいますか。"]),
     ]),
 
-    new("Section 4, unit 21 - Talk about hobbies", [
+    new("25 - Hobbies vocabulary", [
             new("counter for flat objects (paper, stamps, photos, plates, tickets, T-shirts、 bags)", ["まい", "枚"]),
             new("a walk / a stroll", ["さんぽ", "散歩"]),
 
@@ -665,7 +665,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("(I) will write a letter to my friend.", ["友達に手紙を書きます。"]),
             ]),
 
-    new("Section 4, unit 20 - Make requests", [
+    new("24 - Making requests", [
             new("right away, immediately", ["すぐに", "直ぐに"]),
             new("to stand up", ["たちます", "立ちます"]),
             new("to close (something - doors, windows, containers)", ["しめます", "閉めます"]),
@@ -701,7 +701,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Sorry for drinking your coffee. ('your' is explicit)", ["あなたのコーヒーを飲んですみません。"]),
         ]),
 
-    new("Section 4, unit 19 - Say where things are", [
+    new("23 - Locations and positions", [
             new("small, tucked-away area in a corner (literal or figurative)", ["かたすみ", "片隅"]),
             new("corner / nook / corner area (not sharp — more like a zone or area) (indoors/outdoors/abstract spaces that is away from the center)", ["すみ", "隅"]),
             new("counter for books, notebooks, magazines, albums, booklets", ["さつ", "冊"]),
@@ -721,7 +721,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("The chair is under that.　(simple, chair as topic, very common in conversation)", ["椅子はその下です。"]),
         ]),
 
-    new("Section 4, unit 18 - Talk about your schedule", [
+    new("22 - Schedules and plans", [
             new("the day after tomorrow", ["あさって", "明後日"]),
 
             new("I work on Saturdays. (in general, usually part of job)", ["土曜日に働きます。", "土曜日は働きます。"]),
@@ -735,13 +735,13 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I did not buy that book.", ["その本を買いませんでした。"]),
         ]),
 
-    new("Section 4, unit 17 - Ask about food", [
+    new("21 - Asking about food", [
             new("It's time for breakfast.", ["朝ご飯の時間です。"]),
             new("I don't like fish. (stronger negative, stating fact - dislike/hate)", ["魚が嫌いです。"]),
             new("What kinds of rice balls do you have? (polite, soft, conversational, natural in shops)", ["どんなおにぎりがあるんですか。"]),
         ]),
 
-    new("Section 4, unit 16 - Talk about your family", [
+    new("20 - Family vocabulary", [
             new("Those people/they (common in speech)", ["あの人たち"]),
             new("They (female group)", ["かのじょたち", "彼女たち"]),
             new("They (male/mixed group)", ["かれら", "彼ら"]),
@@ -768,7 +768,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Who is his younger brother?", ["かれの弟はだれですか。", "彼の弟は誰ですか。"]),
         ]),
 
-    new("Section 4, unit 15 - Talk about yourself", [
+    new("19 - Talking about yourself", [
             new("My name is Tanaka. (very polite (humble), business/formal intros)", ["田中と申します。"]),
             new("That’s wrong/not correct/different", ["ちがいます", "違います"]),
             new("What's the difference?", ["ちがいは何ですか。", "違いは何ですか。"]),
@@ -777,13 +777,13 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I will eat two eggs. (use counter for small, round/compact objects.)", ["卵を二こ食べます。", "卵を二個食べます。"]),
             new("What grade are you in?", ["何年生ですか。"]),
         ]),
-    new("Section 4, unit 14 - Describe your home", [
+    new("18 - Describing your home", [
             new("I'm at school.", ["学校にいます。"]),
             new("There are puppies and kittens.", ["こいぬとこねこがいます。", "子犬と子猫がいます。"]),
             new("There are three windows in the room. (emphasize room with contrast, use existence)", ["部屋には窓が三つあります。"]),
         ]),
 
-    new("Section 4, unit 13 - Talk about your day", [
+    new("17 - Daily routines", [
             new("bedroom (formal, non-English everyday speech)", ["しんしつ", "寝室"]),
             new("kitchen (traditional/general)", ["だいどころ", "台所"]),
             new("midnight (zero o’clock) (12:00 AM / midnight / 00:00)", ["れいじ", "零時", "午前零時"]),
@@ -810,7 +810,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I go shopping.", ["買い物に行きます。"]),
         ]),
 
-    new("Section 4, unit 12 - Discuss a meal", [
+    new("16 - Mealtime conversation", [
             new("What's (your) name? (honorific/politeness prefix)", ["お名前は何ですか。"]),
             new("Which one is it?", ["どれですか。"]),
             new("Which one is the water? (Which one is the one that is water?)", ["どれが水ですか。"]),
@@ -823,7 +823,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I eat at around ten o'clock.", ["十時ごろに食べます。", "十時ごろ食べます。", "十時ぐらいに食べます。", "十時ぐらい食べます。", "十時くらいに食べます。", "十時くらい食べます。"]),
         ]),
 
-    new("Section 4, unit 11 - Communicate at a store", [
+    new("15 - In-store communication", [
             new("meat bun", ["肉まん"]),
             new("to warm/heat", ["あたためます", "温めます"]),
             new("to push/press (for buttons, doors, or stamps/seals)", ["おします", "押します"]),
@@ -865,7 +865,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("A lot of money.", ["たくさんのお金。"]),
         ]),
 
-        new("Section 4, unit 10 - Buy stationery", [
+        new("14 - Stationery shopping", [
             new("which day", ["なんにち", "何日"]),
             new("which day of the week", ["何曜日"]),
             new("calendar", ["カレンダー"]),
@@ -900,7 +900,7 @@ new("Section 4, unit 22 - Describe extended family", [
             ]
         ),
 
-        new("Section 4, unit 9 - Desribe a recent date",[
+        new("13 - Describing a recent outing",[
             new("pudding", ["プリン"]),
             new("fishing", ["つり", "釣り"]),
             new("license / permit / certification", ["めんきょ", "免許"]),
@@ -919,7 +919,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I have a lot of sports equipment. (ownership)", ["スポーツようひんをたくさんもっています。", "スポーツ用品をたくさん持っています。", "たくさんのスポーツ用品を持っています。", "スポーツ用品はたくさん持っています。"]),
             ]),
 
-        new("Section 4, unit 8 - Talk about classes at university",[
+        new("12 - University classes",[
             new("to choose / to select / to pick", ["えらびます", "選びます"]),
             new("by all means/definitely/certainly/please do (strongly encourage/express desire)", ["ぜひ", "是非"]),
             new("theater / drama / stage play", ["えんげき", "演劇"]),
@@ -956,7 +956,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I want to study abroad in Germany.", ["ドイツにりゅうがくしたいです。","ドイツに留学したいです。"]),
             ]),
 
-        new("Section 4, unit 7 - Connect two adjectives",[
+        new("11 - Connecting adjectives",[
             new("amazing / incredible / wow / awesome", ["すごい", "凄い"]),
             new("the best / supreme / awesome / top-notch", ["さいこう", "最高"]),
             new("cook (head chef / someone skilled in cooking)", ["シェフ"]),
@@ -983,7 +983,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Right, it's cheap so let's eat at this sushi restaurant.", ["そうですね、安いのでこの寿司屋で食べましょう。"]),
             ]),
 
-        new("Section 4, unit 6 - Make plans to go out",[
+        new("10 - Making plans to go out",[
             new("actress", ["じょゆう", "女優"]),
             new("genre", ["ジャンル"]),
             new("arcade / game center", ["ゲームセンター"]),
@@ -1011,7 +1011,7 @@ new("Section 4, unit 22 - Describe extended family", [
             ]
         ),
 
-        new("Section 4, unit 5 - Describe a wedding",[
+        new("9 - Wedding vocabulary",[
             new("I rented a limousine with my family.", ["かぞくとリムジンをかりました。", "家族とリムジンを借りました。"]),
             new("The venue wasn't big.", ["かいじょうは大きくなかったです。", "会場は大きくなかったです。"]),
             new("The venue wasn't close.", ["かいじょうは近くなかったです。", "会場は近くなかったです。"]),
@@ -1032,7 +1032,7 @@ new("Section 4, unit 22 - Describe extended family", [
             ]
         ),
 
-        new("Section 4, unit 4 - Discuss what to eat",[
+        new("8 - Choosing what to eat",[
             new("family restaurant (casual chain restaurant)", ["ファミレス"]),
             new("drink bar / self-service beverage station", ["ドリンクバー"]),
             new("broccoli", ["ブロッコリー"]),
@@ -1057,7 +1057,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("Let's go to a western-style restaurant", ["ようしょくレストランに行きましょう。", "洋食レストランに行きましょう。"]),
             ]),
 
-        new("Section 4, unit 3 - Suggest things to do at the beach",[
+        new("7 - Beach activities",[
             new("lemon", ["レモン"]),
             new("shaved ice, a sweet ice dessert often flavored with syrup", ["かきごおり", "かき氷"]),
 
@@ -1089,7 +1089,7 @@ new("Section 4, unit 22 - Describe extended family", [
             ]
         ),
 
-        new("Section 4, unit 2 - Describe health habits",[
+        new("6 - Health habits and routines",[
             new("influenza", ["インフルエンザ"]),
             new("carrot", ["にんじん", "人参"]),
             new("yogurt", ["ヨーグルト"]),
@@ -1118,7 +1118,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("I don't really like oily stuff (food)", ["あぶらっこい物はちょっと。", "油っこい物はちょっと。", "油っこい物はあまり好きじゃないです。"])
         ]),
 
-        new("Section 4, unit 1 - Use past tense negative adjectives",[
+        new("5 - Negative past-tense adjectives",[
             new("haunted house / haunted attraction", ["おばけやしき", "お化け屋敷"]),
             new("is crowded / is packed", ["こんでいます", "混んでいます"]),
             new("floor", ["ゆか", "床"]),
@@ -1139,7 +1139,7 @@ new("Section 4, unit 22 - Describe extended family", [
 
         ]),
 
-        new("Section 3, unit 30 - Talk about your childhood",[
+        new("4 - Childhood memories",[
             new("When I a child", ["こどものとき", "子供の時"]),
             new("When I was six years old", ["ろくさいのとき", "六歳の時"]),
             new("When I was an elementary school student, I learned swimming in PE.", ["しょうがくせいのとき、たいいくですいえいをならいました。", "小学生の時、体育で水泳を習いました。"]),
@@ -1152,7 +1152,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("The art teacher was occasionally strict.", ["びじゅつのせんせいはたまにきびしかったです。", "美術の先生はたまに厳しかったです。"]),
             new("When I was in kindergarten, I occasionally received candy from my teacher.", ["ようちえんのとき、たまにせんせいからあめをもらいました。", "幼稚園の時、たまに先生からあめを貰いました。", "幼稚園の時、たまに先生から飴を貰いました。"]),
             ]),
-        new("Section 3, unit 29 - Complain about a hotel",[
+        new("3 - Hotel complaints",[
             new("advertisement / commercial / ad", ["こうこく", "広告"]),
             new("curtain", ["カーテン"]),
             new("cockroach", ["ゴキブリ"]),
@@ -1165,7 +1165,7 @@ new("Section 4, unit 22 - Describe extended family", [
             new("other / another / different (other of the same set)", ["ほかの", "他の", "他"]),
             new("other / another / different (other option, not necessarily same set)", ["べつの", "別の", "別"]),
             ]),
-        new("Section 3, unit 28 - Describe health issues",[
+        new("2 - Health and medical issues",[
             new("to put in / to insert / to add (object / reservation)", ["いれます", "入れます"]),
             new("What’s wrong? / What happened?", ["どうしましたか"]),
             new("It hurts / painful", ["いたい", "痛い"]),
@@ -1185,7 +1185,7 @@ new("Section 4, unit 22 - Describe extended family", [
 
         ]),
 
-        new("Section 3, unit 27 - Use past tense adjectives",[
+        new("1 - Past-tense adjectives",[
             new("shelf", ["たな", "棚"]),
             new("husband (someone else's, medium polite, casual)", ["旦那さん"]),
             new("wife (someone else's, medium polite, casual)", ["奥さん"]),
